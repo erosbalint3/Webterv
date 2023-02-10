@@ -33,8 +33,26 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
+    z-index: 100;
 }
 
+#navigationBar > a {
+    transition: 200ms linear;
+    background-color: none;
+    color: white;
+    border-radius: 5%;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    padding: 1%;
+}
+
+#navigationBar > a:hover {
+    transition: 200ms linear;
+    background-color: white;
+    color: black !important;
+}
 #body {
     display: flex;
     margin: auto;
@@ -74,17 +92,21 @@ body {
     color: white;
 }
 
-#body > #cards > .card:hover {
+#body > #cards > .card:hover{
     transition: 300ms linear;
-    width: 22%;
-    height: 490px;
+    transform: scale(1.1);  
+}
+
+#body > #cards > .card:hover h2 {
     color: black;
+    transition: 300ms linear;
+    margin-top: 170%;
 }
 
 #body > #cards > .card > h2 {
     margin-top: 150%;
     margin-left: 10%;
-    
+    transition: 300ms linear;
     font-size: 25px;
     text-transform: uppercase;
 }
