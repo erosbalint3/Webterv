@@ -1,0 +1,114 @@
+aside {
+    background-color: rgba(255, 255, 255, 0.226);
+    border-radius: 10px;
+    height: 1000px;
+    width: 20%;
+    float: left;
+    margin-right: 1%;
+   
+    
+}
+
+section {
+    float: left;
+    background-color: rgba(255, 255, 255, 0.226);
+    border-radius: 10px;
+    width: 79%;
+    height:1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    height: 450px;
+    width: 300px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+ul > li {
+    text-decoration: none;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 5px;
+    border-radius: 10px;
+    list-style-type: none;
+    color: white;
+    font-size: 20px;
+}
+
+.lowerActiveEuropa {
+ 
+    height: auto;
+    display: block;
+    transition: 300ms linear;
+}
+
+.lowerInactiveEuropa {
+
+    height: 0px;
+    display: none;
+    transition: 300ms linear;
+}
+
+.lowerActiveAmerika {
+    transition: 300ms linear;
+    height: auto;
+    display: block;
+}
+
+.lowerInactiveAmerika {
+    transition: 300ms linear;
+    height: 0px;
+    display: none;
+}
+
+.lowerActiveAfrika {
+    transition: 300ms linear;
+    height: auto;
+    display: block;
+}
+
+.lowerInactiveAfrika {
+    transition: 300ms linear;
+    height: 0px;
+    display: none;
+}
+
+.lowerActiveAzsia {
+    transition: 300ms linear;
+    height: auto;
+    display: block;
+}
+
+.lowerInactiveAzsia {
+    transition: 300ms linear;
+    height: 0px;
+    display: none;
+}
+
+.lowerActiveAusztralia {
+    transition: 300ms linear;
+    height: auto;
+    display: block;
+}
+
+.lowerInactiveAusztralia {
+    transition: 300ms linear;
+    height: 0px;
+    display: none;
+}
+
+.right {
+    float: right;
+}
