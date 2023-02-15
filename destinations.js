@@ -60,3 +60,20 @@ lowerUlAusztraliaLi.addEventListener("click", function() {
         lowerUlAusztralia.classList.remove("lowerActiveAusztralia");
     }
 });
+
+var europeCardIds = ["praga", "berlin", "roma", "madrid", "budapest"];
+var europeCardImages = ["praga.jpg", "berlin.jpg", "roma.jpg", "madrid.jpg", "budapest.jpg"];
+var cardCount = 0;
+$(document).ready(function() {
+    for (var i = 0; i < europeCardIds.length; i++) {
+        if (cardCount == 0) {
+            $("#cardSection").append('<div id="' + europeCardIds[cardCount] + '" class="card"></div>');
+            $("#" + europeCardIds[cardCount]).css({'background-image': 'url("Images/' + europeCardImages[cardCount] + '")'});
+            cardCount++;
+        } else {
+            $("#" + europeCardIds[cardCount - 1]).after('<div id="' + europeCardIds[cardCount] + '" class="card"></div>');
+            $("#" + europeCardIds[cardCount]).css({'background-image': 'url("Images/' + europeCardImages[cardCount] + '")'});
+            cardCount++;
+        }
+    }
+})

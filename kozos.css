@@ -7,7 +7,8 @@ header {
     margin-top: 25px;
     display: flex;
     width: 100%;
-    position: sticky;
+    position: fixed;
+    z-index: 100;
 }
 
 header > #logo {
@@ -39,7 +40,6 @@ header > #navigationBar > a {
 
 #navigationBar > a {
     transition: 200ms linear;
-    background-color: none;
     color: white;
     border-radius: 5%;
     border-bottom-left-radius: 10px 10px;
