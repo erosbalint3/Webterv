@@ -13,7 +13,8 @@
     color: white;
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: leftp;
+    text-align: left;
+    margin-top: 100px;
 }
 
 #body > #cards {
@@ -21,6 +22,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 100px;
     
 }
 
@@ -30,7 +32,6 @@
 
 #body > #cards > .card {
     border-radius: 10px;
-    box-shadow: 10px black;
     background-color: rgba(227, 223, 222, 0.5);
     width: 18%;
     height: 450px;

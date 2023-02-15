@@ -1,3 +1,7 @@
+body {
+    background-attachment: fixed;
+}
+
 aside {
     background-color: rgba(255, 255, 255, 0.226);
     border-radius: 10px;
@@ -5,16 +9,17 @@ aside {
     width: 20%;
     float: left;
     margin-right: 1%;
-   
+    margin-top: 100px;
     
 }
 
-section {
+#cardSection {
+    margin-top: 100px;
     float: left;
     background-color: rgba(255, 255, 255, 0.226);
     border-radius: 10px;
     width: 79%;
-    height:1000px;
+    height:auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -27,6 +32,7 @@ section {
     background-color: aliceblue;
     border-radius: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 ul {
@@ -111,4 +117,16 @@ ul > li {
 
 .right {
     float: right;
+}
+
+.card {
+    background-size: cover;
+    transition: 300ms linear;
+}
+
+.card:hover {
+    transition: 300ms linear;
+    transform: scale(1.2);
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
