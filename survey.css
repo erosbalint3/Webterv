@@ -1,0 +1,55 @@
+header{
+    top: 8px;
+}
+#title {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#body{
+    margin-top: 100px;
+    margin-right: 300px;
+    margin-left: 300px;
+    padding: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#survey{
+    float: left;
+    background-color: rgba(255, 255, 255, 0.226);
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin-top:10px;
+    border-radius: 10px;
+    height: 450px;
+}
+table{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center; 
+}
+th, td{
+    font-weight: normal;
+    padding: 10px;
+}
+input[type=submit]{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    width: 150px;
+    height: 40px;
+}
+input[type=radio]{
+    height: 17px;
+    width: 17px;
+}

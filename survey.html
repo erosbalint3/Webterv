@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "hu">
+    <head>
+        <title>Satisfaction survey</title>
+        <link rel="stylesheet" href="survey.css">
+        <link rel="stylesheet" href="kozos.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header>
+            <span id="logo">
+                <img src="Images/logo.png" alt="Logo">
+            </span>
+            <span id="navigationBar">
+                <a href="index.html">Home</a>
+                <a href="destinations.html">Available destinations</a>
+                <a href="">Messages</a>
+                <a href="survey.html">Satisfaction survey</a>
+                <a href="">Contact</a>
+            </span>
+        </header>
+        <div id="body">
+            <div id="title">
+                <h1>Please rate us!</h1>
+            </div>
+            <div id="survey">
+                <form method="POST">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Very unsatisfied</th>
+                            <th>Unsatisfied</th>
+                            <th>Neutral</th>
+                            <th>Satisfied</th>
+                            <th>Very satisfied</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Overall satisfaction</td>
+                            <td><input type="radio" name="overall" value="1"/></td>
+                            <td><input type="radio" name="overall" value="2"/></td>
+                            <td><input type="radio" name="overall" value="3"/></td>
+                            <td><input type="radio" name="overall" value="4"/></td>
+                            <td><input type="radio" name="overall" value="5"/></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Ticketing</td>
+                            <td><input type="radio" name="ticketing" value="1"/></td>
+                            <td><input type="radio" name="ticketing" value="2"/></td>
+                            <td><input type="radio" name="ticketing" value="3"/></td>
+                            <td><input type="radio" name="ticketing" value="4"/></td>
+                            <td><input type="radio" name="ticketing" value="5"/></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Online services</td>
+                            <td><input type="radio" name="os" value="1"/></td>
+                            <td><input type="radio" name="os" value="2"/></td>
+                            <td><input type="radio" name="os" value="3"/></td>
+                            <td><input type="radio" name="os" value="4"/></td>
+                            <td><input type="radio" name="os" value="5"/></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Customer services</td>
+                            <td><input type="radio" name="cs" value="1"/></td>
+                            <td><input type="radio" name="cs" value="2"/></td>
+                            <td><input type="radio" name="cs" value="3"/></td>
+                            <td><input type="radio" name="cs" value="4"/></td>
+                            <td><input type="radio" name="cs" value="5"/></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Submit"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
