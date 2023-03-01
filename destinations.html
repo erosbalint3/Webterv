@@ -20,65 +20,66 @@
             </span>
         </header>
         <aside>
+            <button id="backButton" onclick="backToCategories()">Back to main categories</button>
             <ul>
                 <li id="lowerEuropaLi"> <span>Europe</span> <span class="right">↓</span></li>
                 <li style="background-color: rgba(0,0,0,0);">
                     <ul id="lowerEuropa" class="lowerInactiveEuropa">
-                        <li>Western-Europe</li>
-                        <li>Central-Europe</li>
-                        <li>Eastern-Europe</li>
-                        <li>Southern-Europe</li>
-                        <li>Northern-Europe</li>
+                        <li id="wEur">Western-Europe</li>
+                        <li id="cEur">Central-Europe</li>
+                        <li id="eEur">Eastern-Europe</li>
+                        <li id="sEur">Southern-Europe</li>
+                        <li id="nEur">Northern-Europe</li>
                     </ul>
                 </li>
                 <li id="lowerAmerikaLi"><span>North-America</span> <span class="right">↓</span></li>
                 <li style="background-color: rgba(0,0,0,0);">
                     <ul id="lowerAmerika" class="lowerInactiveAmerika">
-                        <li>Canada</li>
-                        <li>Hawaii</li>
-                        <li>Colorado</li>
-                        <li>California</li>
-                        <li>Oregon</li>
+                        <li id="cAmer">Canada</li>
+                        <li id="hAmer">Hawaii</li>
+                        <li id="kAmer">Colorado</li>
+                        <li id="tAmer">California</li>
+                        <li id="oAmer">Oregon</li>
                     </ul>
                 </li>
                 <li id="lowerAfrikaLi"><span>Africa</span> <span class="right">↓</span></li>
                 <li style="background-color: rgba(0,0,0,0);">
                     <ul id="lowerAfrika" class="lowerInactiveAfrika">
-                        <li>Northern-Africa</li>
-                        <li>Eastern-Africa</li>
-                        <li>Southern-Africa</li>
-                        <li>Western-Africa</li>
-                        <li>Central-Africa</li>
+                        <li id="nAfr">Northern-Africa</li>
+                        <li id="eAfr">Eastern-Africa</li>
+                        <li id="sAfr">Southern-Africa</li>
+                        <li id="wAfr">Western-Africa</li>
+                        <li id="cAfr">Central-Africa</li>
                     </ul>
                 </li>
                 <li id="lowerAzsiaLi"><span>Asia</span> <span class="right">↓</span></li>
                 <li style="background-color: rgba(0,0,0,0);">
                     <ul id="lowerAzsia" class="lowerInactiveAzsia">
-                        <li>Northern-Asia</li>
-                        <li>Eastern-Asia</li>
-                        <li>Southern-Asia</li>
-                        <li>Western-Asia</li>
-                        <li>Central-Asia</li>
+                        <li id="nAsia">Northern-Asia</li>
+                        <li id="eAsia">Eastern-Asia</li>
+                        <li id="sAsia">Southern-Asia</li>
+                        <li id="wAsia">Western-Asia</li>
+                        <li id="cAsia">Central-Asia</li>
                     </ul>
                 </li>
                 <li id="lowerAusztraliaLi"><span>Australia</span> <span class="right">↓</span></li>
                 <li style="background-color: rgba(0,0,0,0);">
                     <ul id="lowerAusztralia" class="lowerInactiveAusztralia">
-                        <li>Northern-Australia</li>
-                        <li>Eastern-Australia</li>
-                        <li>Southern-Australia</li>
-                        <li>Western-Australia</li>
-                        <li>Central-Australia</li>
+                        <li id="nAus">Northern-Australia</li>
+                        <li id="eAus">Eastern-Australia</li>
+                        <li id="sAus">Southern-Australia</li>
+                        <li id="wAus">Western-Australia</li>
+                        <li id="cAus">Central-Australia</li>
                     </ul>
                 </li>
             </ul>
         </aside>
         <div id="cardSection">
-            <div id="europeCard" class="card" style="background-image: url('Images/europe.jpg')"> </div>
-            <div id="americaCard" class="card" style="background-image: url('Images/america.jpg')"> </div>
-            <div id="africaCard" class="card" style="background-image: url('Images/africa.jpg')"> </div>
-            <div id="asiaCard" class="card" style="background-image: url('Images/asia.jpg')"> </div>
-            <div id="australiaCard" class="card" style="background-image: url('Images/australia.jpg')"> </div>
+            <div id="europeCard" class="card" style="background-image: url('Images/europe.jpg')"> <h2>Europe</h2></div>
+            <div id="americaCard" class="card" style="background-image: url('Images/america.jpg')"> <h2>America</h2> </div>
+            <div id="africaCard" class="card" style="background-image: url('Images/africa.jpg')"> <h2>Africa</h2></div>
+            <div id="asiaCard" class="card" style="background-image: url('Images/asia.jpg')"> <h2>Asia</h2></div>
+            <div id="australiaCard" class="card" style="background-image: url('Images/australia.jpg')"> <h2>Australia</h2></div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <script src="destinations.js"></script>
