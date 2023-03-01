@@ -61,10 +61,12 @@
 
 #card1 {
     background-image: url("Images/australia.jpg");
+    background-size: cover;
 }
 
 #card2 {
     background-image: url("Images/europe.jpg");
+    background-size: cover;
 }
 
 #card3 {

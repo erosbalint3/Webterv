@@ -130,3 +130,26 @@ ul > li {
     margin-bottom: 5%;
     margin-top: 5%;
 }
+
+ .card:hover h2 {
+    color: black;
+    transition: 300ms linear;
+    margin-top: 150%;
+}
+
+ .card > h2 {
+    margin-top: 130%;
+    margin-left: 10%;
+    transition: 300ms linear;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#backButton {
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    margin-top: 15px;
+    margin-left: 20px;
+}
