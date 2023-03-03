@@ -176,11 +176,11 @@ function showEuropeCards() {
     let cardCount = 0;
     for (let i = 0; i < europeCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + europeCardIds[cardCount] + '" class="card"> <h2>' + europeCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + europeCardIds[cardCount] + '" title = "' + europeCardTexts[cardCount] + '" class="card"> <h2>' + europeCardTexts[cardCount] + '</h2></div>');
             $("#" + europeCardIds[cardCount]).css({'background-image': 'url("Images/' + europeCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + europeCardIds[cardCount - 1]).after('<div id="' + europeCardIds[cardCount] + '" class="card"> <h2>' + europeCardTexts[cardCount] + '</h2></div>');
+            $("#" + europeCardIds[cardCount - 1]).after('<div id="' + europeCardIds[cardCount] + '" title = "' + europeCardTexts[cardCount] + '" class="card"> <h2>' + europeCardTexts[cardCount] + '</h2></div>');
             $("#" + europeCardIds[cardCount]).css({'background-image': 'url("Images/' + europeCardImages[cardCount] + '")'});
             cardCount++;
         }
@@ -191,26 +191,27 @@ function showAmericaCards() {
     let cardCount = 0;
     for (let i = 0; i < americaCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + americaCardIds[cardCount] + '" class="card"> <h2>' + americaCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + americaCardIds[cardCount] + '" title = "' + americaCardTexts[cardCount] + '" class="card"> <h2>' + americaCardTexts[cardCount] + '</h2></div>');
             $("#" + americaCardIds[cardCount]).css({'background-image': 'url("Images/' + americaCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + americaCardIds[cardCount - 1]).after('<div id="' + americaCardIds[cardCount] + '" class="card"> <h2>' + americaCardTexts[cardCount] + '</h2></div>');
+            $("#" + americaCardIds[cardCount - 1]).after('<div id="' + americaCardIds[cardCount] + '" title = "' + americaCardTexts[cardCount] + '" class="card"> <h2>' + americaCardTexts[cardCount] + '</h2></div>');
             $("#" + americaCardIds[cardCount]).css({'background-image': 'url("Images/' + americaCardImages[cardCount] + '")'});
             cardCount++;
         }
     }
+    makeCardClickable();
 }
 
 function showAfricaCards() {
     let cardCount = 0;
     for (let i = 0; i < africaCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + africaCardIds[cardCount] + '" class="card"> <h2>' + africaCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + africaCardIds[cardCount] + '" title = "' + africaCardTexts[cardCount] + '" class="card"> <h2>' + africaCardTexts[cardCount] + '</h2></div>');
             $("#" + africaCardIds[cardCount]).css({'background-image': 'url("Images/' + africaCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + africaCardIds[cardCount - 1]).after('<div id="' + africaCardIds[cardCount] + '" class="card"> <h2>' + africaCardTexts[cardCount] + '</h2></div>');
+            $("#" + africaCardIds[cardCount - 1]).after('<div id="' + africaCardIds[cardCount] + '" title = "' + africaCardTexts[cardCount] + '" class="card"> <h2>' + africaCardTexts[cardCount] + '</h2></div>');
             $("#" + africaCardIds[cardCount]).css({'background-image': 'url("Images/' + africaCardImages[cardCount] + '")'});
             cardCount++;
         }
@@ -221,11 +222,11 @@ function showAsiaCards() {
     let cardCount = 0;
     for (let i = 0; i < asiaCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + asiaCardIds[cardCount] + '" class="card"> <h2>' + asiaCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + asiaCardIds[cardCount] + '" title = "' + asiaCardTexts[cardCount] + '" class="card"> <h2>' + asiaCardTexts[cardCount] + '</h2></div>');
             $("#" + asiaCardIds[cardCount]).css({'background-image': 'url("Images/' + asiaCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + asiaCardIds[cardCount - 1]).after('<div id="' + asiaCardIds[cardCount] + '" class="card"> <h2>' + asiaCardTexts[cardCount] + '</h2></div>');
+            $("#" + asiaCardIds[cardCount - 1]).after('<div id="' + asiaCardIds[cardCount] + '" title = "' + asiaCardTexts[cardCount] + '" class="card"> <h2>' + asiaCardTexts[cardCount] + '</h2></div>');
             $("#" + asiaCardIds[cardCount]).css({'background-image': 'url("Images/' + asiaCardImages[cardCount] + '")'});
             cardCount++;
         }
@@ -236,11 +237,11 @@ function showAustraliaCards() {
     let cardCount = 0;
     for (let i = 0; i < australiaCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + australiaCardIds[cardCount] + '" class="card"> <h2>' + australiaCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + australiaCardIds[cardCount] + '" title = "' + australiaCardTexts[cardCount] + '" class="card"> <h2>' + australiaCardTexts[cardCount] + '</h2></div>');
             $("#" + australiaCardIds[cardCount]).css({'background-image': 'url("Images/' + australiaCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + australiaCardIds[cardCount - 1]).after('<div id="' + australiaCardIds[cardCount] + '" class="card"> <h2>' + australiaCardTexts[cardCount] + '</h2></div>');
+            $("#" + australiaCardIds[cardCount - 1]).after('<div id="' + australiaCardIds[cardCount] + '" title = "' + australiaCardTexts[cardCount] + '" class="card"> <h2>' + australiaCardTexts[cardCount] + '</h2></div>');
             $("#" + australiaCardIds[cardCount]).css({'background-image': 'url("Images/' + australiaCardImages[cardCount] + '")'});
             cardCount++;
         }
@@ -678,3 +679,420 @@ function removeCardById(cards) {
         document.getElementById(cards[i]).remove();
     }
 }
+
+const details = [
+    {
+      "DESTINATION": "Na Pali Coast",
+      "DETAILS": "Na Pali Coast: Located in Kauai, Hawaii, Na Pali Coast is a stunning coastline that features dramatic sea cliffs, lush green valleys, and hidden beaches. It is a popular destination for hiking, kayaking, and boat tours.",
+      "PRICE": "200$"
+    },
+    {
+      "DESTINATION": "Pololu Valley",
+      "DETAILS": "Pololu Valley: Located on the north coast of the Big Island of Hawaii, Pololu Valley is a beautiful valley that is surrounded by steep cliffs and features a black sand beach. It is a popular destination for hiking and scenic drives.",
+      "PRICE": "300$"
+    },
+    {
+      "DESTINATION": "Waimea Canyon",
+      "DETAILS": "Waimea Canyon: Also known as the Grand Canyon of the Pacific, Waimea Canyon is located on the island of Kauai, Hawaii. It is a stunning natural wonder that features deep canyons, colorful cliffs, and lush green forests. It is a popular destination for hiking and scenic drives.",
+      "PRICE": "250$"
+    },
+    {
+      "DESTINATION": "Rocky Mountain National Park",
+      "DETAILS": "Rocky Mountain National Park: Located in Colorado, Rocky Mountain National Park is a natural wonder that features soaring peaks, alpine lakes, and vast forests. It is a popular destination for hiking, camping, and wildlife viewing.",
+      "PRICE": "400$"
+    },
+    {
+      "DESTINATION": "Maroon Bells",
+      "DETAILS": "Maroon Bells: Located in the Elk Mountains of Colorado, the Maroon Bells are two peaks that are surrounded by stunning alpine scenery. It is a popular destination for hiking, photography, and scenic drives.",
+      "PRICE": "500$"
+    },
+    {
+      "DESTINATION": "Garden of the Gods",
+      "DETAILS": "Garden of the Gods: Located in Colorado Springs, Colorado, Garden of the Gods is a stunning natural wonder that features towering red rock formations. It is a popular destination for hiking, rock climbing, and photography.",
+      "PRICE": "524$"
+    },
+    {
+      "DESTINATION": "Yosemite National Park",
+      "DETAILS": "Yosemite National Park: Located in California, Yosemite National Park is a breathtaking natural wonder that features towering granite cliffs, thundering waterfalls, and vast meadows. It is a popular destination for hiking, camping, and wildlife viewing.",
+      "PRICE": "327$"
+    },
+    {
+      "DESTINATION": "Big Sur",
+      "DETAILS": "Big Sur: Located on the central coast of California, Big Sur is a rugged stretch of coastline that features towering cliffs, hidden beaches, and beautiful redwood forests. It is a popular destination for hiking, camping, and scenic drives.",
+      "PRICE": "768$"
+    },
+    {
+      "DESTINATION": "San Francisco",
+      "DETAILS": "San Francisco: Located in northern California, San Francisco is a vibrant city that is known for its iconic landmarks, including the Golden Gate Bridge, Alcatraz Island, and Fisherman's Wharf. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "912$"
+    },
+    {
+      "DESTINATION": "Crater Lake National Park",
+      "DETAILS": "Crater Lake National Park: Located in Oregon, Crater Lake National Park is a stunning natural wonder that features a deep blue lake that was formed by a volcanic eruption. It is a popular destination for hiking, camping, and scenic drives.",
+      "PRICE": "293$"
+    },
+    {
+      "DESTINATION": "Columbia River Gorge",
+      "DETAILS": "Columbia River Gorge: Located in Oregon and Washington, the Columbia River Gorge is a stunning river canyon that features towering cliffs, thundering waterfalls, and beautiful forests. It is a popular destination for hiking, sightseeing, and photography.",
+      "PRICE": "558$"
+    },
+    {
+      "DESTINATION": "Cannon Beach",
+      "DETAILS": "Cannon Beach: Located on the Oregon coast, Cannon Beach is a beautiful seaside town that features a stunning beach that is known for its iconic Haystack Rock. It is a popular destination for beachcombing, hiking, and sightseeing.",
+      "PRICE": "145$"
+    },
+    {
+      "DESTINATION": "Niagara Falls",
+      "DETAILS": "Niagara Falls: Located on the border of Ontario, Canada, and New York, United States, Niagara Falls is a breathtaking natural wonder that features thundering waterfalls and stunning views. It is a popular destination for sightseeing, boat tours, and outdoor activities.",
+      "PRICE": "667$"
+    },
+    {
+      "DESTINATION": "Quebec City",
+      "DETAILS": "Quebec City: Located in Quebec, Canada, Quebec City is a charming and historic city that features stunning architecture, cobblestone streets, and a beautiful old town. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "830$"
+    },
+    {
+      "DESTINATION": "Vancouver",
+      "DETAILS": "Vancouver: Located in British Columbia, Canada, Vancouver is a vibrant city that features stunning natural beauty, including mountains, beaches, and forests. It is a popular destination for sightseeing, outdoor activities, and dining.",
+      "PRICE": "443$"
+    },
+    {
+      "DESTINATION": "Norwegian Fjords",
+      "DETAILS": "Norwegian Fjords: Located in Norway, the Norwegian Fjords are a stunning natural wonder that features towering cliffs, deep blue waters, and beautiful forests. It is a popular destination for hiking, kayaking, and scenic cruises.",
+      "PRICE": "652$"
+    },
+    {
+      "DESTINATION": "Stockholm",
+      "DETAILS": "Stockholm: Located in Sweden, Stockholm is a beautiful city that features stunning architecture, historic landmarks, and beautiful waterways. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "187$"
+    },
+    {
+      "DESTINATION": "Isle of Skye",
+      "DETAILS": "Isle of Skye: Located in Scotland, the Isle of Skye is a stunning island that features rugged landscapes, beautiful beaches, and historic landmarks. It is a popular destination for hiking, sightseeing, and photography.",
+      "PRICE": "723$"
+    },
+    {
+      "DESTINATION": "Krakow",
+      "DETAILS": "Krakow: Located in Poland, Krakow is a historic city that features beautiful architecture, charming streets, and a rich cultural heritage. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "579$"
+    },
+    {
+      "DESTINATION": "Brasov",
+      "DETAILS": "Brasov: Located in Romania, Brasov is a beautiful city that features stunning architecture, historic landmarks, and beautiful landscapes. It is a popular destination for sightseeing, hiking, and winter sports.",
+      "PRICE": "265$"
+    },
+    {
+      "DESTINATION": "Vilnius",
+      "DETAILS": "Vilnius: Located in Lithuania, Vilnius is a charming city that features beautiful architecture, historic landmarks, and a vibrant cultural scene. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "384$"
+    },
+    {
+      "DESTINATION": "Santorini",
+      "DETAILS": "Santorini: Located in Greece, Santorini is a stunning island that features beautiful white-washed buildings, turquoise waters, and stunning sunsets. It is a popular destination for sightseeing, beachcombing, and romantic getaways.",
+      "PRICE": "856$"
+    },
+    {
+      "DESTINATION": "Dubrovnik",
+      "DETAILS": "Dubrovnik: Located in Croatia, Dubrovnik is a beautiful city that features stunning architecture, historic landmarks, and a beautiful coastline. It is a popular destination for sightseeing, beachcombing, and boat tours.",
+      "PRICE": "559$"
+    },
+    {
+      "DESTINATION": "Pompeii",
+      "DETAILS": "Pompeii: Located in Italy, Pompeii is an ancient Roman city that was buried by the eruption of Mount Vesuvius. It is a popular destination for sightseeing and learning about ancient history.",
+      "PRICE": "638$"
+    },
+    {
+      "DESTINATION": "Paris",
+      "DETAILS": "Paris: Located in France, Paris is a romantic and historic city that features stunning architecture, iconic landmarks, and world-class museums. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "310$"
+    },
+    {
+      "DESTINATION": "Amsterdam",
+      "DETAILS": "Amsterdam: Located in the Netherlands, Amsterdam is a charming city that features beautiful canals, historic landmarks, and a vibrant cultural scene. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "798$"
+    },
+    {
+      "DESTINATION": "Barcelona",
+      "DETAILS": "Barcelona: Located in Spain, Barcelona is a vibrant city that features stunning architecture, historic landmarks, and beautiful beaches. It is a popular destination for sightseeing, beachcombing, and dining.",
+      "PRICE": "483$"
+    },
+    {
+      "DESTINATION": "Budapest",
+      "DETAILS": "Budapest: Located in Hungary, Budapest is a beautiful city that features stunning architecture, historic landmarks, and beautiful waterways. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "619$"
+    },
+    {
+      "DESTINATION": "Vienna",
+      "DETAILS": "Vienna: Located in Austria, Vienna is a beautiful city that features stunning architecture, historic landmarks, and a rich cultural heritage. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "415$"
+    },
+    {
+      "DESTINATION": "Prague",
+      "DETAILS": "Prague: Located in the Czech Republic, Prague is a historic city that features stunning architecture, beautiful landmarks, and a vibrant cultural scene. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "953$"
+    },
+    {
+      "DESTINATION": "Marrakech",
+      "DETAILS": "Marrakech: Located in Morocco, Marrakech is a vibrant city that features beautiful architecture, historic landmarks, and a rich cultural heritage. It is a popular destination for sightseeing, shopping, and dining.",
+      "PRICE": "105$"
+    },
+    {
+      "DESTINATION": "Pyramids of Giza",
+      "DETAILS": "Pyramids of Giza: Located in Egypt, the Pyramids of Giza are ancient wonders that feature stunning architecture and a rich cultural history. They are a popular destination for sightseeing and learning about ancient history.",
+      "PRICE": "743$"
+    },
+    {
+      "DESTINATION": "Sahara Deserts",
+      "DETAILS": "Sahara Desert: Located in North Africa, the Sahara Desert is a stunning natural wonder that features vast sand dunes, beautiful landscapes, and a unique cultural heritage. It is a popular destination for desert safaris, stargazing, and cultural tours.",
+      "PRICE": "218$"
+    },
+    {
+      "DESTINATION": "Serengeti National Park",
+      "DETAILS": "Serengeti National Park: Located in Tanzania, Serengeti National Park is a breathtaking natural wonder that features endless savannahs, diverse wildlife, and a unique cultural heritage. It is a popular destination for wildlife safaris, hot air balloon rides, and cultural tours.",
+      "PRICE": "991$"
+    },
+    {
+      "DESTINATION": "Mount Kilimanjaro",
+      "DETAILS": "Mount Kilimanjaro: Located in Tanzania, Mount Kilimanjaro is the highest peak in Africa and a popular destination for hiking and climbing.",
+      "PRICE": "754$"
+    },
+    {
+      "DESTINATION": "Zanzibar",
+      "DETAILS": "Zanzibar: Located off the coast of Tanzania, Zanzibar is a beautiful island that features stunning beaches, historic landmarks, and a rich cultural heritage. It is a popular destination for beachcombing, water sports, and cultural tours.",
+      "PRICE": "423$"
+    },
+    {
+      "DESTINATION": "Cape Town",
+      "DETAILS": "Cape Town: Located in South Africa, Cape Town is a stunning city that features beautiful beaches, historic landmarks, and a vibrant cultural scene. It is a popular destination for sightseeing, beachcombing, and cultural tours.",
+      "PRICE": "576$"
+    },
+    {
+      "DESTINATION": "Okavango Delta",
+      "DETAILS": "Okavango Delta: Located in Botswana, the Okavango Delta is a unique natural wonder that features a diverse range of wildlife and stunning landscapes. It is a popular destination for wildlife safaris, boat tours, and cultural tours.",
+      "PRICE": "268$"
+    },
+    {
+      "DESTINATION": "Table Mountain",
+      "DETAILS": "Table Mountain: Located in South Africa, Table Mountain is a stunning natural wonder that features beautiful landscapes and stunning views of the city of Cape Town. It is a popular destination for hiking, sightseeing, and cultural tours.",
+      "PRICE": "983$"
+    },
+    {
+      "DESTINATION": "Dakar",
+      "DETAILS": "Dakar: Located in Senegal, Dakar is a vibrant city that features stunning architecture, beautiful beaches, and a rich cultural heritage. It is a popular destination for sightseeing, beachcombing, and cultural tours.",
+      "PRICE": "144$"
+    },
+    {
+      "DESTINATION": "Cape Verde",
+      "DETAILS": "Cape Verde: Located off the coast of West Africa, Cape Verde is a beautiful archipelago that features stunning beaches, diverse wildlife, and a unique cultural heritage. It is a popular destination for beachcombing, water sports, and cultural tours.",
+      "PRICE": "637$"
+    },
+    {
+      "DESTINATION": "Ghana's Gold Coast",
+      "DETAILS": "Ghana's Gold Coast: Located in Ghana, the Gold Coast features stunning beaches, historic landmarks, and a rich cultural heritage. It is a popular destination for beachcombing, water sports, and cultural tours.",
+      "PRICE": "362$"
+    },
+    {
+      "DESTINATION": "Dzanga-Sangha National Park",
+      "DETAILS": "Dzanga-Sangha National Park: Located in the Central African Republic, Dzanga-Sangha National Park is a stunning natural wonder that features diverse wildlife, beautiful landscapes, and a unique cultural heritage. It is a popular destination for wildlife safaris, hiking, and cultural tours.",
+      "PRICE": "763$"
+    },
+    {
+      "DESTINATION": "Lake Kivu",
+      "DETAILS": "Lake Kivu: Located in Rwanda, Lake Kivu is a beautiful lake that features stunning landscapes, beautiful beaches, and a unique cultural heritage. It is a popular destination for water sports, beachcombing, and cultural tours.",
+      "PRICE": "528$"
+    },
+    {
+      "DESTINATION": "Zinga Beach",
+      "DETAILS": "Zinga Beach: Located in Tanzania, Zinga Beach is a beautiful beach that features stunning landscapes and a unique cultural heritage. It is a popular destination for beachcombing, water sports, and cultural tours.",
+      "PRICE": "704$"
+    },
+    {
+      "DESTINATION": "Lake Baikal",
+      "DETAILS": "Lake Baikal: Located in Russia, Lake Baikal is a stunning natural wonder that features crystal-clear waters, diverse wildlife, and beautiful landscapes. It is a popular destination for hiking, wildlife safaris, and cultural tours.",
+      "PRICE": "916$"
+    },
+    {
+      "DESTINATION": "Gobi Desert",
+      "DETAILS": "Gobi Desert: Located in Mongolia, the Gobi Desert is a stunning natural wonder that features vast sand dunes, diverse wildlife, and beautiful landscapes. It is a popular destination for desert safaris, stargazing, and cultural tours.",
+      "PRICE": "875$"
+    },
+    {
+      "DESTINATION": "Kungur Ice Cave",
+      "DETAILS": "Kungur Ice Cave: Located in Russia, Kungur Ice Cave is a breathtaking natural wonder that features stunning ice formations and beautiful landscapes. It is a popular destination for sightseeing and cultural tours.",
+      "PRICE": "351$"
+    },
+    {
+      "DESTINATION": "Mount Fuji",
+      "DETAILS": "Mount Fuji: Located in Japan, Mount Fuji is a stunning natural wonder that features beautiful landscapes and a unique cultural heritage. It is a popular destination for hiking, sightseeing, and cultural tours.",
+      "PRICE": "424$"
+    },
+    {
+      "DESTINATION": "The Greate Wall of China",
+      "DETAILS": "The Great Wall of China: Located in China, the Great Wall is an iconic landmark that features stunning architecture and a rich cultural history. It is a popular destination for sightseeing and learning about ancient history.",
+      "PRICE": "456$"
+    },
+    {
+      "DESTINATION": "Taipei 101",
+      "DETAILS": "Taipei 101: Located in Taiwan, Taipei 101 is a skyscraper that features stunning architecture and breathtaking views of the city. It is a popular destination for sightseeing and shopping.",
+      "PRICE": "619$"
+    },
+    {
+      "DESTINATION": "Taj Mahal",
+      "DETAILS": "Taj Mahal: Located in India, the Taj Mahal is a stunning mausoleum that features beautiful architecture and a rich cultural history. It is a popular destination for sightseeing and learning about ancient history.",
+      "PRICE": "103$"
+    },
+    {
+      "DESTINATION": "The Maldives",
+      "DETAILS": "The Maldives: Located in the Indian Ocean, the Maldives is a beautiful archipelago that features stunning beaches, crystal-clear waters, and a unique cultural heritage. It is a popular destination for beachcombing, water sports, and cultural tours.",
+      "PRICE": "502$"
+    },
+    {
+      "DESTINATION": "Sigiriya",
+      "DETAILS": "Sigiriya: Located in Sri Lanka, Sigiriya is an ancient fortress that features stunning architecture and a rich cultural history. It is a popular destination for sightseeing and learning about ancient history.",
+      "PRICE": "618$"
+    },
+    {
+      "DESTINATION": "Petra",
+      "DETAILS": "Petra: Located in Jordan, Petra is an ancient city that features beautiful architecture and a rich cultural history. It is a popular destination for sightseeing and learning about ancient history.",
+      "PRICE": "876$"
+    },
+    {
+      "DESTINATION": "Cappadocia",
+      "DETAILS": "Cappadocia: Located in Turkey, Cappadocia is a stunning natural wonder that features beautiful landscapes and a unique cultural heritage. It is a popular destination for hot air balloon rides, hiking, and cultural tours.",
+      "PRICE": "293$"
+    },
+    {
+      "DESTINATION": "Dubai",
+      "DETAILS": "Dubai: Located in the United Arab Emirates, Dubai is a vibrant city that features stunning architecture, beautiful beaches, and a rich cultural heritage. It is a popular destination for sightseeing, shopping, and beachcombing.",
+      "PRICE": "650$"
+    },
+    {
+      "DESTINATION": "Samarkand",
+      "DETAILS": "Samarkand: Located in Uzbekistan, Samarkand is an ancient city that features beautiful architecture and a rich cultural history. It is a popular destination for sightseeing and learning about ancient history.",
+      "PRICE": "148$"
+    },
+    {
+      "DESTINATION": "Almaty",
+      "DETAILS": "Almaty: Located in Kazakhstan, Almaty is a stunning city that features beautiful architecture, stunning landscapes, and a unique cultural heritage. It is a popular destination for sightseeing, skiing, and cultural tours.",
+      "PRICE": "437$"
+    },
+    {
+      "DESTINATION": "Dushanbe",
+      "DETAILS": "Dushanbe: Located in Tajikistan, Dushanbe is a vibrant city that features stunning architecture, beautiful parks, and a rich cultural heritage. It is a popular destination for sightseeing and cultural tours.",
+      "PRICE": "764$"
+    },
+    {
+      "DESTINATION": "Kakadu National Park",
+      "DETAILS": "Kakadu National Park: Located in Australia, Kakadu National Park is a stunning natural wonder that features diverse wildlife, beautiful landscapes, and a unique cultural heritage. It is a popular destination for wildlife safaris, hiking, and cultural tours.",
+      "PRICE": "174$"
+    },
+    {
+      "DESTINATION": "Ningaloo Reef",
+      "DETAILS": "Ningaloo Reef: Located in Australia, Ningaloo Reef is a beautiful reef that features stunning coral formations and diverse marine life. It is a popular destination for snorkeling, diving, and beachcombing.",
+      "PRICE": "907$"
+    },
+    {
+      "DESTINATION": "Cable Beach",
+      "DETAILS": "Cable Beach: Located in Australia, Cable Beach is a stunning beach that features beautiful landscapes and crystal-clear waters. It is a popular destination for beachcombing, water sports, and cultural tours.",
+      "PRICE": "732$"
+    },
+    {
+      "DESTINATION": "Sydney Opera House",
+      "DETAILS": "Sydney Opera House: Located in Australia, the Sydney Opera House is a stunning landmark that features beautiful architecture and a rich cultural history. It is a popular destination for sightseeing and learning about the arts.",
+      "PRICE": "200$"
+    },
+    {
+      "DESTINATION": "Blue Mountains National Park",
+      "DETAILS": "Blue Mountains National Park: Located in Australia, the Blue Mountains National Park is a beautiful park that features stunning landscapes and diverse wildlife. It is a popular destination for hiking, wildlife safaris, and cultural tours.",
+      "PRICE": "818$"
+    },
+    {
+      "DESTINATION": "Fraser Island",
+      "DETAILS": "Fraser Island: Located in Australia, Fraser Island is a stunning natural wonder that features beautiful landscapes and diverse wildlife. It is a popular destination for hiking, wildlife safaris, and beachcombing.",
+      "PRICE": "277$"
+    },
+    {
+      "DESTINATION": "Great Ocean Road",
+      "DETAILS": "Great Ocean Road: Located in Australia, the Great Ocean Road is a scenic drive that features stunning coastal landscapes and beautiful beaches. It is a popular destination for sightseeing and beachcombing.",
+      "PRICE": "953$"
+    },
+    {
+      "DESTINATION": "Kangaroo Island",
+      "DETAILS": "Kangaroo Island: Located in Australia, Kangaroo Island is a stunning natural wonder that features diverse wildlife, beautiful landscapes, and crystal-clear waters. It is a popular destination for wildlife safaris, beachcombing, and cultural tours.",
+      "PRICE": "564$"
+    },
+    {
+      "DESTINATION": "Yorke Peninsula",
+      "DETAILS": "Yorke Peninsula: Located in Australia, the Yorke Peninsula is a beautiful peninsula that features stunning coastal landscapes and a unique cultural heritage. It is a popular destination for beachcombing, water sports, and cultural tours.",
+      "PRICE": "436$"
+    },
+    {
+      "DESTINATION": "Purnululu National Park",
+      "DETAILS": "Purnululu National Park: Located in Australia, Purnululu National Park is a stunning natural wonder that features beautiful landscapes and unique geological formations. It is a popular destination for hiking and sightseeing.",
+      "PRICE": "301$"
+    },
+    {
+      "DESTINATION": "Coral Bay",
+      "DETAILS": "Coral Bay: Located in Australia, Coral Bay is a stunning beach that features beautiful coral reefs and diverse marine life. It is a popular destination for snorkeling, diving, and beachcombing.",
+      "PRICE": "621$"
+    },
+    {
+      "DESTINATION": "Esperance",
+      "DETAILS": "Esperance: Located in Australia, Esperance is a beautiful coastal town that features stunning beaches and crystal-clear waters. It is a popular destination for beachcombing, water sports, and cultural tours.",
+      "PRICE": "858$"
+    },
+    {
+      "DESTINATION": "Kings Canyon",
+      "DETAILS": "Kings Canyon: Located in Australia, Kings Canyon is a stunning natural wonder that features beautiful landscapes and unique geological formations. It is a popular destination for hiking and sightseeing.",
+      "PRICE": "479$"
+    },
+    {
+      "DESTINATION": "Alice Springs",
+      "DETAILS": "Alice Springs: Located in Australia, Alice Springs is a vibrant town that features stunning landscapes, diverse wildlife, and a unique cultural heritage. It is a popular destination for sightseeing, hiking, and cultural tours.",
+      "PRICE": "141$"
+    },
+    {
+      "DESTINATION": "Palm Valley",
+      "DETAILS": "Palm Valley: Located in Australia, Palm Valley is a stunning natural wonder that features unique geological formations and diverse wildlife. It is a popular destination for hiking and sightseeing.",
+      "PRICE": "648$"
+    }
+  ];
+
+  function makeCardClickable() {
+    let cards = document.querySelectorAll(`[title]`);
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            const cardDetails = getDestinationDetail(card.title);
+            makeDetailPopUp(cardDetails.DESTINATION, cardDetails.DETAILS, cardDetails.PRICE);
+        });
+    });
+  }
+
+  
+  let detailsHeader = document.getElementById("detailsHeader");
+  let detailP = document.getElementById("details");
+  let priceHeader = document.getElementById("price");
+  function makeDetailPopUp(destination, details, price) {
+    $('body').addClass('blurred');
+  $('.box-modal').addClass('modal-show');
+
+
+    $("#detailPopUp").addClass('active');
+    $('#detailPopUp').removeClass('inactive');
+
+    detailsHeader.innerText = destination;
+    detailP.innerText = details;
+    priceHeader.innerText = price;
+  }
+
+  function getDestinationDetail(title) {
+    return details.find((dest) => dest.DESTINATION == title);
+  }
+  
+  function exitPopUp() {
+    $('body').removeClass('blurred');
+    $('.box-modal').removeClass('modal-show');
+    $('#detailPopUp').removeClass('active');
+
+  }
+  

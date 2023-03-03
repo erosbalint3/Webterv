@@ -2,6 +2,29 @@ body {
     background-attachment: fixed;
 }
 
+body.blurred {
+    overflow:hidden;
+    
+}
+
+body.blurred header {
+    transition:0.2s;
+    -webkit-filter: blur(3px);
+    filter: blur(3px) !important;
+}
+
+body.blurred aside {
+    transition:0.2s;
+    -webkit-filter: blur(3px);
+    filter: blur(3px) !important;
+}
+
+body.blurred #cardSection {
+    transition:0.2s;
+    -webkit-filter: blur(3px);
+    filter: blur(3px) !important;
+}
+
 aside {
     background-color: rgba(255, 255, 255, 0.226);
     border-radius: 10px;
@@ -24,6 +47,7 @@ aside {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    filter: blur(0px);
 }
 
 .card {
@@ -152,4 +176,85 @@ ul > li {
     border: none;
     margin-top: 15px;
     margin-left: 20px;
+}
+
+.box-modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left:0;
+    top: 0;
+    visibility: hidden;
+}
+
+.box-modal .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 1.3s;
+}
+
+.box-modal .body-modal {
+    max-height:0px;
+    opacity:0;
+    overflow:hidden;
+
+}
+
+.box-modal .body-modal #detailPopUp {
+    background:#fff;
+      padding:25px;
+      border-radius: 8px;
+      position:relative;
+      z-index:1;
+      box-shadow:0px 0px 65px 0px rgba(0, 0, 0, 0.43);
+}
+
+.box-modal.modal-show {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+     visibility:visible;
+     transition:all 0.9s;
+}
+
+.box-modal .modal-show .overlay {
+    opacity:0.5;
+      transition:opacity 1.3s;
+}
+
+.box-modal .modal-show .body-model {
+    max-height:1000px;
+       opacity:1;
+       visibility: visible;
+       transition:0.3s max-height 0.8s, 0.3s opacity 0.6s, ;
+}
+
+#detailPopUp.active{
+    transition: 300ms linear;
+    display: block;
+    position: fixed;
+    z-index: 100000;
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0.804);
+    padding: 20px;
+    top: 10%;
+    left: 30%;
+    width: 800px;
+    height: 800px;
+    color: black;
+}
+
+#detailPopUp > p {
+    font-size: 35px;
+}
+
+#detailPopUp > h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
 }

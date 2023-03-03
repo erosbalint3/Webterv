@@ -81,6 +81,17 @@
             <div id="asiaCard" class="card" style="background-image: url('Images/asia.jpg')"> <h2>Asia</h2></div>
             <div id="australiaCard" class="card" style="background-image: url('Images/australia.jpg')"> <h2>Australia</h2></div>
         </div>
+        <div class="box-modal">
+            <div id="overlay" class="overlay"></div>
+            <div id="body-modal">
+                <div id="detailPopUp" class="inactive">
+                    <button onclick="exitPopUp()" id="exitButton"><img src="Images/exitIcon.gif" alt="Exit"></button>
+                    <h1 id="detailsHeader"></h1>
+                    <p id="details"></p>
+                    <h3 id="price"></h3>
+                </div>
+            </div>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <script src="destinations.js"></script>
     </body>
