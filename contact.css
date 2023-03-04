@@ -1,15 +1,31 @@
+body {
+    background-attachment: fixed;
+}
+
 #contactInformations {
     border-radius: 10px;
     background-color: rgba(240, 248, 255, 0.251);
     padding: 40px;
     width: 500px;
-    margin-top: 200px;
     height: 400px;
-    position: absolute;
-    margin-left: 38%;
     color: white;
     font-size: 23px;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 1400px) {
+    #elements {
+        flex-direction: column !important;
+        margin-top: 200px;
+    }
+}
+
+#elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #report {
@@ -38,13 +54,10 @@ li > img {
 }
 
 #emailDialog {
-    display: block;
     padding: 40px;
+    display: none;
     background-color: rgba(240, 248, 255, 0.251);
     width: 400px;
-    margin-top: 200px;
-    visibility: hidden;
-    margin-left: 40%;
     width: 700px;
     border-radius: 10px;
 }

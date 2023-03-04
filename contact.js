@@ -6,16 +6,16 @@ let clicked = false;
 reportButton.onclick = function() {
     if (!clicked) {
         informationBlock.style.transition = 400 + 'ms ease';
-        informationBlock.style.marginLeft = 150 + 'px';
+        informationBlock.style.marginRight = "10px";
     
-        emailBlock.style.visibility = "visible";
+        emailBlock.style.display = "block";
 
         clicked = true;
     } else {
         informationBlock.style.transition = 400 + 'ms ease';
-        informationBlock.style.marginLeft = 38 + '%';
+        informationBlock.style.marginRight = "0px";
     
-        emailBlock.style.visibility = "hidden";
+        emailBlock.style.display = "none";
 
         clicked = false;
     }

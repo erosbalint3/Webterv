@@ -9,6 +9,38 @@ header {
     width: 100%;
     position: fixed;
     z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        flex-direction: row !important;
+        margin-top: 70px;
+    }
+
+    header > #navigationBar {
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        height: 20% !important;
+    }
+
+    #logo > img {
+        width: 100% !important;
+    }
+
+    main > aside {
+        margin-top: 160px;
+    }
 }
 
 header > #logo {
@@ -21,7 +53,7 @@ header > #logo > img {
 }
 
 header > #navigationBar {
-    width: 100%;
+    width: 97%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

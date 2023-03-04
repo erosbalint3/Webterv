@@ -68,7 +68,7 @@ let europeCardImages = ["norwegianFjords.jpg", "stockholm.jpg", "isleOfSkye.jpg"
 let americaCardIds = ["hNaPaliCoast", "hPololuValley", "hWaimeaCanyon", "kRockyMountainNPark", "kMaroonBells", "kGardenOfTheGods", "tYosemiteNPark",
                       "tBigSur", "tSanFrancisco", "oCraterLakeNPark", "oColumbiaRiverGorge", "oCannonBeach", "cNiagaraFalls", "cQuebecCity",
                       "cVancouver"];
-let americaCardTexts = ["Na Pali Coast", "Pololu Valley", "Waimea Canyon", "Rocky Mountain National Park", "Maroon Bells", "Garden Of The Gods", "Yosemite National Park", "Big Sur",
+let americaCardTexts = ["Na Pali Coast", "Pololu Valley", "Waimea Canyon", "Rocky Mountain National Park", "Maroon Bells", "Garden of the Gods", "Yosemite National Park", "Big Sur",
                         "San Francisco", "Crater Lake National Park", "Columbia River Gorge", "Cannon Beach", "Niagara Falls", "Quebec City", "Vancouver"];
 let americaCardImages = ["naPaliCoast.jpg", "pololuValley.jpg", "waimeaCanyon.jpg", "rockyMountainNPark.jpg", "maroonBells.jpg", "gardenOfTheGods.jpg",
                          "yosemiteNPark.jpg", "bigSur.jpg", "sanFrancisco.jpg", "craterLakeNPark.jpg", "columbiaRiverGorge.jpg", "cannonBeach.jpg",
@@ -176,26 +176,27 @@ function showEuropeCards() {
     let cardCount = 0;
     for (let i = 0; i < europeCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + europeCardIds[cardCount] + '" title = "' + europeCardTexts[cardCount] + '" class="card"> <h2>' + europeCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + europeCardIds[cardCount] + '" title = "' + europeCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"> <h2>' + europeCardTexts[cardCount] + '</h2></div></div>');
             $("#" + europeCardIds[cardCount]).css({'background-image': 'url("Images/' + europeCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + europeCardIds[cardCount - 1]).after('<div id="' + europeCardIds[cardCount] + '" title = "' + europeCardTexts[cardCount] + '" class="card"> <h2>' + europeCardTexts[cardCount] + '</h2></div>');
+            $("#" + europeCardIds[cardCount - 1]).after('<div id="' + europeCardIds[cardCount] + '" title = "' + europeCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"> <h2>' + europeCardTexts[cardCount] + '</h2></div></div>');
             $("#" + europeCardIds[cardCount]).css({'background-image': 'url("Images/' + europeCardImages[cardCount] + '")'});
             cardCount++;
         }
     }
+    makeCardClickable();
 }
 
 function showAmericaCards() {
     let cardCount = 0;
     for (let i = 0; i < americaCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + americaCardIds[cardCount] + '" title = "' + americaCardTexts[cardCount] + '" class="card"> <h2>' + americaCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + americaCardIds[cardCount] + '" title = "' + americaCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"> <h2>' + americaCardTexts[cardCount] + '</h2></div></div>');
             $("#" + americaCardIds[cardCount]).css({'background-image': 'url("Images/' + americaCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + americaCardIds[cardCount - 1]).after('<div id="' + americaCardIds[cardCount] + '" title = "' + americaCardTexts[cardCount] + '" class="card"> <h2>' + americaCardTexts[cardCount] + '</h2></div>');
+            $("#" + americaCardIds[cardCount - 1]).after('<div id="' + americaCardIds[cardCount] + '" title = "' + americaCardTexts[cardCount] + '" class="card">  <div class="cardOverlay"><h2>' + americaCardTexts[cardCount] + '</h2></div></div>');
             $("#" + americaCardIds[cardCount]).css({'background-image': 'url("Images/' + americaCardImages[cardCount] + '")'});
             cardCount++;
         }
@@ -207,45 +208,48 @@ function showAfricaCards() {
     let cardCount = 0;
     for (let i = 0; i < africaCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + africaCardIds[cardCount] + '" title = "' + africaCardTexts[cardCount] + '" class="card"> <h2>' + africaCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + africaCardIds[cardCount] + '" title = "' + africaCardTexts[cardCount] + '" class="card">  <div class="cardOverlay"><h2>' + africaCardTexts[cardCount] + '</h2></div></div>');
             $("#" + africaCardIds[cardCount]).css({'background-image': 'url("Images/' + africaCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + africaCardIds[cardCount - 1]).after('<div id="' + africaCardIds[cardCount] + '" title = "' + africaCardTexts[cardCount] + '" class="card"> <h2>' + africaCardTexts[cardCount] + '</h2></div>');
+            $("#" + africaCardIds[cardCount - 1]).after('<div id="' + africaCardIds[cardCount] + '" title = "' + africaCardTexts[cardCount] + '" class="card">  <div class="cardOverlay"><h2>' + africaCardTexts[cardCount] + '</h2></div></div>');
             $("#" + africaCardIds[cardCount]).css({'background-image': 'url("Images/' + africaCardImages[cardCount] + '")'});
             cardCount++;
         }
     }
+    makeCardClickable();
 }
 
 function showAsiaCards() {
     let cardCount = 0;
     for (let i = 0; i < asiaCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + asiaCardIds[cardCount] + '" title = "' + asiaCardTexts[cardCount] + '" class="card"> <h2>' + asiaCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + asiaCardIds[cardCount] + '" title = "' + asiaCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"><h2>' + asiaCardTexts[cardCount] + '</h2></div></div>');
             $("#" + asiaCardIds[cardCount]).css({'background-image': 'url("Images/' + asiaCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + asiaCardIds[cardCount - 1]).after('<div id="' + asiaCardIds[cardCount] + '" title = "' + asiaCardTexts[cardCount] + '" class="card"> <h2>' + asiaCardTexts[cardCount] + '</h2></div>');
+            $("#" + asiaCardIds[cardCount - 1]).after('<div id="' + asiaCardIds[cardCount] + '" title = "' + asiaCardTexts[cardCount] + '" class="card">  <div class="cardOverlay"><h2>' + asiaCardTexts[cardCount] + '</h2></div></div>');
             $("#" + asiaCardIds[cardCount]).css({'background-image': 'url("Images/' + asiaCardImages[cardCount] + '")'});
             cardCount++;
         }
     }
+    makeCardClickable();
 }
 
 function showAustraliaCards() {
     let cardCount = 0;
     for (let i = 0; i < australiaCardIds.length; i++) {
         if (cardCount == 0) {
-            $("#cardSection").append('<div id="' + australiaCardIds[cardCount] + '" title = "' + australiaCardTexts[cardCount] + '" class="card"> <h2>' + australiaCardTexts[cardCount] + '</h2></div>');
+            $("#cardSection").append('<div id="' + australiaCardIds[cardCount] + '" title = "' + australiaCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"> <h2>' + australiaCardTexts[cardCount] + '</h2></div></div>');
             $("#" + australiaCardIds[cardCount]).css({'background-image': 'url("Images/' + australiaCardImages[cardCount] + '")'});
             cardCount++;
         } else {
-            $("#" + australiaCardIds[cardCount - 1]).after('<div id="' + australiaCardIds[cardCount] + '" title = "' + australiaCardTexts[cardCount] + '" class="card"> <h2>' + australiaCardTexts[cardCount] + '</h2></div>');
+            $("#" + australiaCardIds[cardCount - 1]).after('<div id="' + australiaCardIds[cardCount] + '" title = "' + australiaCardTexts[cardCount] + '" class="card"> <h2>' + australiaCardTexts[cardCount] + '</h2></div></div>');
             $("#" + australiaCardIds[cardCount]).css({'background-image': 'url("Images/' + australiaCardImages[cardCount] + '")'});
             cardCount++;
         }
     }
+    makeCardClickable();
 }
 
 let nEur = document.getElementById("nEur");
