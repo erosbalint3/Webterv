@@ -4,7 +4,6 @@ body {
 
 body.blurred {
     overflow:hidden;
-    
 }
 
 body.blurred header {
@@ -25,6 +24,28 @@ body.blurred #cardSection {
     filter: blur(3px) !important;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    #cardSection {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 10px !important;
+    }
+}
+
 aside {
     background-color: rgba(255, 255, 255, 0.226);
     border-radius: 10px;
@@ -33,7 +54,6 @@ aside {
     float: left;
     margin-right: 1%;
     margin-top: 100px;
-    
 }
 
 #cardSection {
@@ -78,14 +98,12 @@ ul > li {
 }
 
 .lowerActiveEuropa {
- 
     height: auto;
     display: block;
     transition: 300ms linear;
 }
 
 .lowerInactiveEuropa {
-
     height: 0px;
     display: none;
     transition: 300ms linear;
@@ -146,22 +164,16 @@ ul > li {
 .card {
     background-size: cover;
     transition: 300ms linear;
+    cursor: pointer;
 }
 
-.card:hover {
-    transition: 300ms linear;
-    transform: scale(1.2);
-    margin-bottom: 5%;
-    margin-top: 5%;
-}
-
- .card:hover h2 {
+.card:hover .cardOverlay {
     color: black;
-    transition: 300ms linear;
-    margin-top: 150%;
+    visibility: visible;
+    cursor: pointer;
 }
 
- .card > h2 {
+.card > h2 {
     margin-top: 130%;
     margin-left: 10%;
     transition: 300ms linear;
@@ -257,4 +269,17 @@ ul > li {
     text-transform: uppercase;
     font-size: 40px;
     text-align: center;
+}
+
+.cardOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    opacity: 0.7;
+    visibility: hidden;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
