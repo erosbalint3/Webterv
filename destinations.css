@@ -214,7 +214,9 @@ ul > li {
     max-height:0px;
     opacity:0;
     overflow:hidden;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box-modal .body-modal #detailPopUp {
@@ -282,4 +284,24 @@ ul > li {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (pointer: coarse) {
+    #detailPopUp.active {
+        left: 7% !important;
+    }
+
+    aside {
+        margin-top: 150px !important;
+    }
+
+    aside > ul > li {
+        padding: 80px !important;
+        margin-bottom: -70px;
+        font-size: 70px;
+    }
+
+    li[style] > ul > li {
+        padding: 40px;
+    }
 }

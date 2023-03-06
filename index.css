@@ -1,5 +1,6 @@
 body {
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #body {
@@ -19,6 +20,24 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
     margin-top: 100px;
+}
+
+@media (pointer: coarse) {
+    #body > #welcomeLabel {
+        width: 95%;
+        height: 90vh;
+        margin-top: 10vh;
+        font-size: 80px;
+    }
+
+    #body > #cards {
+        width: 95% !important;
+    }
+
+    #body > #cards > .card {
+        width: 400px !important;
+        height: 580px !important;
+    }
 }
 
 #body > #cards {

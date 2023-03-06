@@ -2,6 +2,14 @@ body {
     background-image: url("Images/background.jpg");
 }
 
+
+@media (pointer: coarse) {
+    body {
+        background-size: cover !important;
+        background-repeat: no-repeat;
+    }
+}
+
 header {
     height: 5%;
     margin-top: 25px;
