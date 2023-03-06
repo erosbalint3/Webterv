@@ -13,6 +13,38 @@ body {
     text-transform: uppercase;
 }
 
+@media (pointer: coarse) {
+    #contactInformations {
+        width: 100%;
+        margin-top: 400px !important;
+        height: 700px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #report {
+        width: 40% !important;
+    }
+
+    #elements {
+        margin-top: -450px !important;
+    }
+
+    #emailDialog {
+        margin-bottom: -800px !important;
+        width: 100% !important;
+    }
+
+    #emailDialog > form > input {
+        height: 150px !important;
+        font-size: 60px !important;
+    }
+
+    #emailDialog > form > label {
+        font-size: 50px !important;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     #elements {
         flex-direction: column !important;
@@ -57,7 +89,6 @@ li > img {
     padding: 40px;
     display: none;
     background-color: rgba(240, 248, 255, 0.251);
-    width: 400px;
     width: 700px;
     border-radius: 10px;
 }
