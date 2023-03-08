@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Log in</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="kozos.css">
+    </head>
+    <body>
+        <header>
+            <span id="logo">
+                <img src="Images/logo.png" alt="Logo">
+            </span>
+            <span id="navigationBar">
+                <a href="register.html">Register</a>
+            </span>
+        </header>
+        <main>
+            <form action="POST">
+                <label for="emailAddress">Email</label>
+                <input type="text" id="emailAddress">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <input type="button" onclick="login()" value="Log in">
+            </form>
+            <div id="horizontalLine">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <button onclick="login()">Forgot password</button>
+
+        </main>
+        <script src="login.js"></script>
+    </body>
+</html>

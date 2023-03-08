@@ -1,0 +1,45 @@
+main {
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0.505);
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+main > form {
+    display: flex;
+    flex-direction: column;
+}
+
+main > form > input[type = "password"], input[type = "text"] {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgba(240, 248, 255, 0.651);
+    font-size: 20px;
+}
+
+main > form > label {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main input[type = "submit"], button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+#navigationBar a {
+    margin-right: 10px !important;
+}
