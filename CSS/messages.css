@@ -1,8 +1,4 @@
 
-  header {
-    position: fixed;
-    top: 0;
-  }
 
   main {
     display: flex;
@@ -39,7 +35,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    height: 75vh;
+    height: 75%;
     overflow-y: scroll;
     position: relative;
     margin-top: 12vh;
@@ -116,7 +112,6 @@ form button {
 }
 
 .previous-chats {
-  margin-top: 12vh;
   position: relative;
   width: 40%;
   margin-right: 5px;

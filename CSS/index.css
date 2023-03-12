@@ -82,27 +82,27 @@ body {
 }
 
 #card1 {
-    background-image: url("Images/australia.jpg");
+    background-image: url("../Images/australia.jpg");
     background-size: cover;
 }
 
 #card2 {
-    background-image: url("Images/europe.jpg");
+    background-image: url("../Images/europe.jpg");
     background-size: cover;
 }
 
 #card3 {
-    background-image: url("Images/america.jpg");
+    background-image: url("../Images/america.jpg");
     background-size: cover;
 }
 
 #card4 {
-    background-image: url("Images/africa.jpg");
+    background-image: url("../Images/africa.jpg");
     background-size: cover;
 }
 
 #card5 {
-    background-image: url("Images/asia.jpg");
+    background-image: url("../Images/asia.jpg");
     background-size: cover;
 }
 

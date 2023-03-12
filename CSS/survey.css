@@ -1,6 +1,6 @@
 body {
-    height: 100vh;
     font-family: 'Tilt Neon', cursive;
+    background-attachment: fixed;
 }
 
 @media screen and (max-width: 1000px) {
@@ -47,13 +47,9 @@ body {
     #body {
         width: 100% !important;
         padding: 0 !important;
-        margin-top: 170px !important;
+        
     }
 
-}
-
-header {
-    top: 15px;
 }
 
 #title {
@@ -64,14 +60,13 @@ header {
 }
 
 #body {
-    padding: 70px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 10%;
+    
 }
 
 #survey {
