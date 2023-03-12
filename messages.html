@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <head>
-        <title>Messages</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="kozos.css">
-        <link rel="stylesheet" href="messages.css">
-    </head>
-    <body>
-      <header>
-        <span id="logo">
-            <img src="Images/logo.png" alt="Logo">
-        </span>
-        <span id="navigationBar">
-            <a href="index.html">Home</a>
-            <a href="destinations.html">Available destinations</a>
-            <a href="messages.html">Messages</a>
-            <a href="survey.html">Satisfaction survey</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Log in</a>
-        </span>
-      </header>
-      <main>
-        <span class="previous-chats">
-            <ul>
-              <li>
-                <span class="chat-summary">
-                  <div class="avatar">
-                    <img src="Images/avatar.jpg" alt="User 1 Avatar">
-                  </div>
-                  <div class="chat-preview">
-                    <h3>Bálint Oláh</h3>
-                    <p>I'm good, thanks for asking.</p>
-                  </div>
-                  <div class="chat-meta">
-                    <span class="time">2:30 PM</span>
-                    <span class="status unread">1</span>
-                  </div>
-                </span>
-              </li>
-              <li>
-                <span class="chat-summary">
-                  <div class="avatar">
-                    <img src="Images/avatar2,jpg.jpeg" alt="User 2 Avatar">
-                  </div>
-                  <div class="chat-preview">
-                    <h3>Teszt Elek</h3>
-                    <p>Thanks for your help earlier. Everything is working now.</p>
-                  </div>
-                  <div class="chat-meta">
-                    <span class="time">10:15 AM</span>
-                    <span class="status read"></span>
-                  </div>
-                </span>
-              </li>
-            </ul>
-          </span>
-          <span id="message-container">
-            <div class="message">
-              <div class="message-info">
-                <h2>Bálint Oláh</h2>
-                <span class="message-time">1:30 PM</span>
-              </div>
-              <p>Hello, how are you?</p>
+
+<head>
+  <title>Messages</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="kozos.css">
+  <link rel="stylesheet" href="messages.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <span id="logo">
+      <img src="Images/logo.png" alt="Logo">
+    </span>
+    <span id="navigationBar">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Available destinations</a>
+      <a href="messages.html">Messages</a>
+      <a href="survey.html">Satisfaction survey</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Log in</a>
+      <a href="profile.html">Profile</a>
+    </span>
+  </header>
+  <main>
+    <span class="previous-chats">
+      <ul>
+        <li>
+          <span class="chat-summary">
+            <div class="avatar">
+              <img src="Images/avatar.jpg" alt="User 1 Avatar">
             </div>
-            <div class="message sent">
-              <div class="message-info">
-                <h2>You</h2>
-                <span class="message-time">1:32 PM</span>
-              </div>
-              <p>Hi, I'm doing well. How about you?</p>
-            </div>
-            <div class="message">
-              <div class="message-info">
-                <h2>Bálint Oláh</h2>
-                <span class="message-time">1:35 PM</span>
-              </div>
+            <div class="chat-preview">
+              <h3>Bálint Oláh</h3>
               <p>I'm good, thanks for asking.</p>
             </div>
-        </span>
-      </main>
-      
-      <form id="message-form">
-        <input type="text" placeholder="Type a message..." />
-        <button>Send</button>
-      </form>
-      <script src="messages.js"></script>
-    </body>
+            <div class="chat-meta">
+              <span class="time">2:30 PM</span>
+              <span class="status unread">1</span>
+            </div>
+          </span>
+        </li>
+        <li>
+          <span class="chat-summary">
+            <div class="avatar">
+              <img src="Images/avatar2,jpg.jpeg" alt="User 2 Avatar">
+            </div>
+            <div class="chat-preview">
+              <h3>Teszt Elek</h3>
+              <p>Thanks for your help earlier. Everything is working now.</p>
+            </div>
+            <div class="chat-meta">
+              <span class="time">10:15 AM</span>
+              <span class="status read"></span>
+            </div>
+          </span>
+        </li>
+      </ul>
+    </span>
+    <span id="message-container">
+      <div class="message">
+        <div class="message-info">
+          <h2>Bálint Oláh</h2>
+          <span class="message-time">1:30 PM</span>
+        </div>
+        <p>Hello, how are you?</p>
+      </div>
+      <div class="message sent">
+        <div class="message-info">
+          <h2>You</h2>
+          <span class="message-time">1:32 PM</span>
+        </div>
+        <p>Hi, I'm doing well. How about you?</p>
+      </div>
+      <div class="message">
+        <div class="message-info">
+          <h2>Bálint Oláh</h2>
+          <span class="message-time">1:35 PM</span>
+        </div>
+        <p>I'm good, thanks for asking.</p>
+      </div>
+    </span>
+  </main>
+
+  <form id="message-form">
+    <input type="text" placeholder="Type a message..." />
+    <button>Send</button>
+  </form>
+  <script src="messages.js"></script>
+</body>
+
 </html>

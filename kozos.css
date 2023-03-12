@@ -1,7 +1,7 @@
 body {
     background-image: url("Images/background.jpg");
+    font-family: 'Tilt Neon', cursive;
 }
-
 
 @media (pointer: coarse) {
     body {
@@ -10,17 +10,43 @@ body {
     }
 }
 
+@media screen and (max-width: 720px) {
+    header {
+        top: 70px;
+        flex-direction: row !important;
+        margin-top: 70px;
+    }
+
+    #body {
+        margin-top: 170px !important;
+    }
+
+    header>#navigationBar {
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        height: 20% !important;
+    }
+
+    #logo>img {
+        width: 100% !important;
+    }
+
+    main>aside {
+        margin-top: 160px;
+    }
+}
+
 header {
     height: 5%;
-    margin-top: 25px;
-    display: flex;
     width: 100%;
-    position: fixed;
+    position: sticky;
+    top: 25px;
     z-index: 100;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -29,38 +55,18 @@ header {
     }
 }
 
-@media screen and (max-width: 640px) {
-    header {
-        flex-direction: row !important;
-        margin-top: 70px;
-    }
+@media screen and (max-width: 640px) {}
 
-    header > #navigationBar {
-        flex-direction: column !important;
-        justify-content: center;
-        align-items: center;
-        height: 20% !important;
-    }
-
-    #logo > img {
-        width: 100% !important;
-    }
-
-    main > aside {
-        margin-top: 160px;
-    }
-}
-
-header > #logo {
+header>#logo {
     width: 40%;
     margin-top: 0;
 }
 
-header > #logo > img {
+header>#logo>img {
     width: 50%;
 }
 
-header > #navigationBar {
+header>#navigationBar {
     width: 97%;
     display: flex;
     flex-direction: row;
@@ -69,7 +75,7 @@ header > #navigationBar {
     text-align: center;
 }
 
-header > #navigationBar > a {
+header>#navigationBar>a {
     margin: auto;
     color: white;
     text-decoration: none;
@@ -78,7 +84,7 @@ header > #navigationBar > a {
     z-index: 100;
 }
 
-#navigationBar > a {
+#navigationBar>a {
     transition: 200ms linear;
     color: white;
     border-radius: 5%;
@@ -89,7 +95,7 @@ header > #navigationBar > a {
     padding: 1%;
 }
 
-#navigationBar > a:hover {
+#navigationBar>a:hover {
     transition: 200ms linear;
     background-color: white;
     color: black !important;
