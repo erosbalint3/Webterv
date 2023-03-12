@@ -1,6 +1,7 @@
 body {
-    background-image: url("Images/background.jpg");
+    background-image: url("../Images/background.jpg");
     font-family: 'Tilt Neon', cursive;
+    background-attachment: fixed;
 }
 
 @media (pointer: coarse) {
@@ -11,21 +12,21 @@ body {
 }
 
 @media screen and (max-width: 720px) {
-    header {
-        top: 70px;
-        flex-direction: row !important;
-        margin-top: 70px;
-    }
+
 
     #body {
         margin-top: 170px !important;
     }
 
     header>#navigationBar {
-        flex-direction: column !important;
+        flex-direction: row !important;
         justify-content: center;
         align-items: center;
         height: 20% !important;
+    }
+
+    header>#navigationBar>a {
+        padding: 20px;
     }
 
     #logo>img {
@@ -41,7 +42,7 @@ header {
     height: 5%;
     width: 100%;
     position: sticky;
-    top: 25px;
+    top: 0;
     z-index: 100;
     display: flex;
     flex-direction: row;
@@ -53,9 +54,12 @@ header {
     header {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 640px) {}
+    header>#navigationBar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
 
 header>#logo {
     width: 40%;

@@ -177,11 +177,11 @@ function showEuropeCards() {
   for (let i = 0; i < europeCardIds.length; i++) {
     if (cardCount == 0) {
       $("#cardSection").append('<div id="' + europeCardIds[cardCount] + '" title = "' + europeCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"> <h2>' + europeCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + europeCardIds[cardCount]).css({ 'background-image': 'url("Images/' + europeCardImages[cardCount] + '")' });
+      $("#" + europeCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + europeCardImages[cardCount] + '")' });
       cardCount++;
     } else {
       $("#" + europeCardIds[cardCount - 1]).after('<div id="' + europeCardIds[cardCount] + '" title = "' + europeCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"> <h2>' + europeCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + europeCardIds[cardCount]).css({ 'background-image': 'url("Images/' + europeCardImages[cardCount] + '")' });
+      $("#" + europeCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + europeCardImages[cardCount] + '")' });
       cardCount++;
     }
   }
@@ -193,11 +193,11 @@ function showAmericaCards() {
   for (let i = 0; i < americaCardIds.length; i++) {
     if (cardCount == 0) {
       $("#cardSection").append('<div id="' + americaCardIds[cardCount] + '" title = "' + americaCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"> <h2>' + americaCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + americaCardIds[cardCount]).css({ 'background-image': 'url("Images/' + americaCardImages[cardCount] + '")' });
+      $("#" + americaCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + americaCardImages[cardCount] + '")' });
       cardCount++;
     } else {
       $("#" + americaCardIds[cardCount - 1]).after('<div id="' + americaCardIds[cardCount] + '" title = "' + americaCardTexts[cardCount] + '" class="card">  <div class="cardOverlay"><h2>' + americaCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + americaCardIds[cardCount]).css({ 'background-image': 'url("Images/' + americaCardImages[cardCount] + '")' });
+      $("#" + americaCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + americaCardImages[cardCount] + '")' });
       cardCount++;
     }
   }
@@ -209,11 +209,11 @@ function showAfricaCards() {
   for (let i = 0; i < africaCardIds.length; i++) {
     if (cardCount == 0) {
       $("#cardSection").append('<div id="' + africaCardIds[cardCount] + '" title = "' + africaCardTexts[cardCount] + '" class="card">  <div class="cardOverlay"><h2>' + africaCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + africaCardIds[cardCount]).css({ 'background-image': 'url("Images/' + africaCardImages[cardCount] + '")' });
+      $("#" + africaCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + africaCardImages[cardCount] + '")' });
       cardCount++;
     } else {
       $("#" + africaCardIds[cardCount - 1]).after('<div id="' + africaCardIds[cardCount] + '" title = "' + africaCardTexts[cardCount] + '" class="card">  <div class="cardOverlay"><h2>' + africaCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + africaCardIds[cardCount]).css({ 'background-image': 'url("Images/' + africaCardImages[cardCount] + '")' });
+      $("#" + africaCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + africaCardImages[cardCount] + '")' });
       cardCount++;
     }
   }
@@ -225,11 +225,11 @@ function showAsiaCards() {
   for (let i = 0; i < asiaCardIds.length; i++) {
     if (cardCount == 0) {
       $("#cardSection").append('<div id="' + asiaCardIds[cardCount] + '" title = "' + asiaCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"><h2>' + asiaCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + asiaCardIds[cardCount]).css({ 'background-image': 'url("Images/' + asiaCardImages[cardCount] + '")' });
+      $("#" + asiaCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + asiaCardImages[cardCount] + '")' });
       cardCount++;
     } else {
       $("#" + asiaCardIds[cardCount - 1]).after('<div id="' + asiaCardIds[cardCount] + '" title = "' + asiaCardTexts[cardCount] + '" class="card">  <div class="cardOverlay"><h2>' + asiaCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + asiaCardIds[cardCount]).css({ 'background-image': 'url("Images/' + asiaCardImages[cardCount] + '")' });
+      $("#" + asiaCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + asiaCardImages[cardCount] + '")' });
       cardCount++;
     }
   }
@@ -241,11 +241,11 @@ function showAustraliaCards() {
   for (let i = 0; i < australiaCardIds.length; i++) {
     if (cardCount == 0) {
       $("#cardSection").append('<div id="' + australiaCardIds[cardCount] + '" title = "' + australiaCardTexts[cardCount] + '" class="card"> <div class="cardOverlay"> <h2>' + australiaCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + australiaCardIds[cardCount]).css({ 'background-image': 'url("Images/' + australiaCardImages[cardCount] + '")' });
+      $("#" + australiaCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + australiaCardImages[cardCount] + '")' });
       cardCount++;
     } else {
       $("#" + australiaCardIds[cardCount - 1]).after('<div id="' + australiaCardIds[cardCount] + '" title = "' + australiaCardTexts[cardCount] + '" class="card"> <h2>' + australiaCardTexts[cardCount] + '</h2></div></div>');
-      $("#" + australiaCardIds[cardCount]).css({ 'background-image': 'url("Images/' + australiaCardImages[cardCount] + '")' });
+      $("#" + australiaCardIds[cardCount]).css({ 'background-image': 'url("../Images/' + australiaCardImages[cardCount] + '")' });
       cardCount++;
     }
   }
@@ -524,11 +524,11 @@ function filterById(cat) {
   for (let i = 0; i < cards.length; i++) {
     if (cardCount == 0) {
       $("#cardSection").append('<div id = "' + cards[cardCount] + '" class="card"> <h2>' + cardText[cardCount] + '</h2></div>');
-      $("#" + cards[cardCount]).css({ 'background-image': 'url("Images/' + cardImages[cardCount] + '")' });
+      $("#" + cards[cardCount]).css({ 'background-image': 'url("../Images/' + cardImages[cardCount] + '")' });
       cardCount++;
     } else {
       $("#" + cards[cardCount - 1]).after('<div id="' + cards[cardCount] + '" class="card"> <h2>' + cardText[cardCount] + '</h2></div>');
-      $("#" + cards[cardCount]).css({ 'background-image': 'url("Images/' + cardImages[cardCount] + '")' });
+      $("#" + cards[cardCount]).css({ 'background-image': 'url("../Images/' + cardImages[cardCount] + '")' });
       cardCount++;
     }
   }
