@@ -6,8 +6,8 @@ body {
     border-radius: 10px;
     background-color: rgba(240, 248, 255, 0.251);
     padding: 40px;
-    width: 500px;
-    height: 400px;
+    width: 70%;
+    height: auto;
     color: white;
     font-size: 23px;
     text-transform: uppercase;
@@ -16,8 +16,8 @@ body {
 @media (pointer: coarse) {
     #contactInformations {
         width: 100%;
-        margin-top: 400px !important;
-        height: 700px;
+        margin-top: 200px !important;
+        height: auto;
         font-size: 40px;
         text-align: center;
     }
@@ -35,12 +35,12 @@ body {
         width: 100% !important;
     }
 
-    #emailDialog > form > input {
+    #emailDialog>form>input {
         height: 150px !important;
         font-size: 60px !important;
     }
 
-    #emailDialog > form > label {
+    #emailDialog>form>label {
         font-size: 50px !important;
     }
 }
@@ -48,8 +48,19 @@ body {
 @media screen and (max-width: 1400px) {
     #elements {
         flex-direction: column !important;
-        margin-top: 200px;
     }
+
+    #contactInformations {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    li {
+        flex-direction: column !important;
+    }
+
 }
 
 #elements {
@@ -79,26 +90,31 @@ ul li span {
 
 li {
     display: flex;
-    align-items: center ;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
 }
-li > img {
+
+li>img {
     margin-right: 5%;
+    margin-top: 5px;
 }
 
 #emailDialog {
     padding: 40px;
     display: none;
     background-color: rgba(240, 248, 255, 0.251);
-    width: 700px;
+    width: 70%;
     border-radius: 10px;
 }
 
-#emailDialog > form {
+#emailDialog>form {
     display: flex;
     flex-direction: column;
 }
 
-#emailDialog > form input, textarea {
+#emailDialog>form input,
+textarea {
     padding: 3px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -108,16 +124,16 @@ li > img {
     font-size: 20px;
 }
 
-#emailDialog > form > textarea {
+#emailDialog>form>textarea {
     height: 600px;
 }
 
-#emailDialog > form input {
+#emailDialog>form input {
     height: 50px;
     font-size: 25px;
 }
 
-#emailDialog > form > input:focus {
+#emailDialog>form>input:focus {
     outline: none;
 }
 
