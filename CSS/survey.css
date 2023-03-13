@@ -21,6 +21,10 @@ body {
     #survey input[type=submit] {
         transform: scale(2);
     }
+
+    div#mobileHeader > ul > li#surveyLink {
+        background-color: rgb(122, 122, 123) !important;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -137,3 +141,4 @@ input[type=radio] {
     height: 17px;
     width: 17px;
 }
+

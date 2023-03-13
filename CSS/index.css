@@ -43,6 +43,10 @@ body {
         width: 400px !important;
         height: 580px !important;
     }
+
+    #mobileHeader > ul > li#home {
+        background-color: rgb(122, 122, 123) !important;
+    }
 }
 
 #body > #cards {

@@ -31,6 +31,24 @@ main {
     flex-direction: row;
 }
 
+@media screen and (max-width: 750px) {
+    body > main {
+        margin-top: 30% !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        margin-top: 10% !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body > main {
+        margin-top: 90% !important;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     main {
         flex-direction: column;
@@ -206,6 +224,7 @@ ul > li {
     width: 100%;
     height: 100vh;
     left: 0;
+    z-index: -1;
     top: 0;
     background-color: #000;
     opacity: 0;
@@ -244,26 +263,27 @@ header {
 .box-modal .modal-show .overlay {
     opacity:0.5;
       transition:opacity 1.3s;
+      z-index: -1;
 }
 
-.box-modal .modal-show .body-model {
+.box-modal .modal-show .body-modal {
     max-height:1000px;
        opacity:1;
        visibility: visible;
+       z-index: 60000000000;
        transition:0.3s max-height 0.8s, 0.3s opacity 0.6s, ;
 }
 
 #detailPopUp.active{
     transition: 300ms linear;
     display: block;
-    position: fixed;
-    z-index: 100000;
+    
+    z-index: 2000000;
     border-radius: 10px;
     background-color: rgba(240, 248, 255, 0.804);
     padding: 20px;
-    top: 10%;
-    left: 30%;
-    width: 800px;
+    margin: auto;
+    width: 80%;
     height: 800px;
     color: black;
 }
@@ -313,5 +333,9 @@ header {
     #backButton {
         font-size: 80px;
         padding: 30px !important;
+    }
+
+    div#mobileHeader > ul > li#dest {
+        background-color: rgb(122, 122, 123) !important;
     }
 }

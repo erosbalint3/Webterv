@@ -193,10 +193,30 @@ form button {
 main {
     display: flex;
     flex-direction: row;
+    margin-top: 8%;
+    height: 96%;
 }
 
 li {
     list-style-type: none;
+}
+
+@media screen and (max-width: 750px) {
+  body > main {
+      margin-top: 30% !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+      margin-top: 20% !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body > main {
+      margin-top: 90% !important;
+  }
 }
 
 @media (pointer: coarse) {
@@ -223,5 +243,9 @@ li {
 
    #message-form > button {
     font-size: 30px;
+   }
+
+   div#mobileHeader > ul > li#messages {
+    background-color: rgb(122, 122, 123);
    }
 }

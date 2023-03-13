@@ -1098,5 +1098,5 @@ function exitPopUp() {
   $('body').removeClass('blurred');
   $('.box-modal').removeClass('modal-show');
   $('#detailPopUp').removeClass('active');
-
+  console.log("anyadat");
 }

@@ -10,9 +10,65 @@ body {
         background-repeat: no-repeat;
     }
 
-    header > #navigationBar > a {
+    #desktopHeader > #navigationBar > a {
         padding: 80px;
         font-size: 40px !important;
+    }
+
+    #desktopHeader {
+        display: none !important;
+    }
+
+    #mobileHeader img {
+        width: 20% !important;
+        border-radius: 10px !important;
+    }
+
+    #mobileHeader button {
+        border-radius: 40px !important;
+        width: 100% !important;
+        z-index: 20000000;
+    }
+
+    #mobileHeader {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        
+    }
+
+    div#mobileHeader > ul {
+        display: none;
+        flex-direction: column;
+        width: 100% !important;
+        font-size: 100px !important;
+        text-align: center !important;
+        margin-left: -30px;
+        z-index: 200000000;
+    }
+
+    div#mobileHeader > ul > li {
+        background-color: aliceblue;
+        text-align: center !important;
+        list-style-type: none;
+        height: auto !important;
+        padding: 10px;
+        font-size: 100px !important;
+        margin-bottom: 0 !important;
+        width: 100%;
+        margin-left: -5px !important;
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    #mobileHeader > ul > li > a {
+        text-align: center !important;
+        text-decoration: none !important;
+        color: black;
+        width: 100% !important;
+        padding: 0 !important;
     }
 }
 
@@ -23,14 +79,14 @@ body {
         margin-top: 170px !important;
     }
 
-    header>#navigationBar {
+    #desktopHeader>#navigationBar {
         flex-direction: row !important;
         justify-content: center;
         align-items: center;
         height: 20% !important;
     }
 
-    header>#navigationBar>a {
+    #desktopHeader>#navigationBar>a {
         padding: 20px;
     }
 
@@ -43,11 +99,11 @@ body {
     }
 }
 
-header {
-    height: 5%;
+#desktopHeader {
     width: 100%;
-    position: sticky;
-    top: 0;
+    position: fixed !important;
+    top: 1px !important;
+    left: 0;
     z-index: 1;
     display: flex;
     flex-direction: row;
@@ -55,27 +111,31 @@ header {
     margin-right: 15px;
 }
 
+#mobileHeader {
+    display: none;
+}
+
 @media screen and (max-width: 1000px) {
-    header {
+    #desktopHeader {
         flex-direction: column;
     }
 
-    header>#navigationBar {
+    #desktopHeader>#navigationBar {
         flex-direction: row;
         flex-wrap: wrap;
     }
 }
 
-header>#logo {
+#desktopHeader>#logo {
     width: 40%;
     margin-top: 0;
 }
 
-header>#logo>img {
+#desktopHeader>#logo>img {
     width: 50%;
 }
 
-header>#navigationBar {
+#desktopHeader>#navigationBar {
     width: 97%;
     display: flex;
     flex-direction: row;
@@ -84,7 +144,7 @@ header>#navigationBar {
     text-align: center;
 }
 
-header>#navigationBar>a {
+#desktopHeader>#navigationBar>a {
     margin: auto;
     color: white;
     text-decoration: none;
