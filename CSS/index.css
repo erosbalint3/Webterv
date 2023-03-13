@@ -3,6 +3,11 @@ body {
     background-repeat: no-repeat;
 }
 
+#home {
+    background-color: white;
+    color: black !important;
+}
+
 #body {
     display: flex;
     margin: auto;
