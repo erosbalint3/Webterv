@@ -2,6 +2,11 @@ body {
     background-attachment: fixed;
 }
 
+#dest {
+    background-color: white;
+    color: black !important;
+}
+
 body.blurred {
     overflow:hidden;
 }
@@ -221,8 +226,11 @@ ul > li {
       padding:25px;
       border-radius: 8px;
       position:relative;
-      z-index:1;
       box-shadow:0px 0px 65px 0px rgba(0, 0, 0, 0.43);
+}
+
+header {
+    z-index: 0 !important;
 }
 
 .box-modal.modal-show {
@@ -300,5 +308,10 @@ ul > li {
 
     li[style] > ul > li {
         padding: 40px;
+    }
+
+    #backButton {
+        font-size: 80px;
+        padding: 30px !important;
     }
 }

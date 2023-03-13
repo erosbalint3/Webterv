@@ -43,3 +43,27 @@ input:focus {
 #navigationBar a {
     margin-right: 10px !important;
 }
+
+@media (pointer: coarse) {
+    #body {
+        width: 100%;
+    }
+    main {
+        width: 100%;
+        left: 0;
+        height: 52vh;
+        top: 15%;
+        margin-left: 0 !important;
+    }
+
+    main > form > label {
+        font-size: 80px !important;
+    }
+
+    main > form > input {
+        font-size: 80px !important;
+        margin-bottom: 10px;
+    }
+
+    
+}

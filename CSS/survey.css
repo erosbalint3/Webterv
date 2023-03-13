@@ -3,6 +3,26 @@ body {
     background-attachment: fixed;
 }
 
+#surveyLink {
+    background-color: white !important;
+    color: black !important;
+}
+
+@media (pointer: coarse) {
+    #survey {
+        width: 100% !important;
+        font-size: 80px !important;
+    }
+    #survey input[type=radio] {
+        transform: scale(3) !important;
+        margin-right: 10px;
+    }
+
+    #survey input[type=submit] {
+        transform: scale(2);
+    }
+}
+
 @media screen and (max-width: 1000px) {
     #mobile {
         display: block !important;
