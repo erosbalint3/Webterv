@@ -312,6 +312,27 @@ header {
 }
 
 @media (pointer: coarse) {
+
+    @media (orientation: landscape) {
+        #cardSection {
+            width: 100vw;
+        }
+
+        aside {
+            width: 100vw;
+        }
+
+        aside > ul > li {
+            font-size: 40px !important;
+            padding: 10px !important;
+        }
+
+        main {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
     #detailPopUp.active {
         left: 7% !important;
     }
@@ -321,8 +342,8 @@ header {
     }
 
     aside > ul > li {
-        padding: 80px !important;
-        margin-bottom: -70px;
+        padding: 40px !important;
+        margin-bottom: -30px;
         font-size: 70px;
     }
 

@@ -71,8 +71,7 @@ input:focus {
     main {
         width: 100%;
         left: 0;
-        height: 50vh;
-        top: 15%;
+        height: auto;
         margin-left: 0 !important;
     }
 

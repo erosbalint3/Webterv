@@ -2,9 +2,21 @@ body {
     background-image: url("../Images/background.jpg");
     font-family: 'Tilt Neon', cursive;
     background-attachment: fixed;
+
 }
 
 @media (pointer: coarse) {
+
+    @media (orientation: landscape) {
+        header > #mobileHeader > #links > li > a {
+            font-size: 30px;
+        }
+
+        header > #mobileHeader > #links > li {
+            padding: 0px;
+        }
+    }
+
     body {
         background-size: cover !important;
         background-repeat: no-repeat;
@@ -36,7 +48,6 @@ body {
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
-        
     }
 
     div#mobileHeader > ul {

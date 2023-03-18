@@ -10,6 +10,12 @@ main {
     left: 35%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 main > form {
     display: flex;
     flex-direction: column;
@@ -51,8 +57,7 @@ input:focus {
     main {
         width: 100%;
         left: 0;
-        height: 52vh;
-        top: 15%;
+        height: auto;
         margin-left: 0 !important;
     }
 

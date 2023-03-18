@@ -12,9 +12,10 @@ body {
     display: flex;
     margin: auto;
     align-items: center;
-    height: 90%;
+    height: auto;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
 }
 
 #body > #welcomeLabel {
@@ -24,13 +25,12 @@ body {
     text-align: center !important;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
-    margin-top: 100px;
 }
 
 @media (pointer: coarse) {
     #body > #welcomeLabel {
         width: 95%;
-        height: 90vh;
+        height: auto;
         margin-top: 10vh;
         font-size: 80px;
     }

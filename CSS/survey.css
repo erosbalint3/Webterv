@@ -9,6 +9,30 @@ body {
 }
 
 @media (pointer: coarse) {
+
+    @media (orientation: landscape) {
+        #survey > #mobile {
+            display: block ;
+        }
+
+        #survey > #mobile > fieldset {
+            flex-direction: column;
+            display: flex
+        }
+
+        #survey > #mobile > fieldset > span > label, legend {
+            font-size: 30px;
+        }
+
+        #survey > form {
+            display: none;
+        }
+
+        #body > #survey {
+            height: auto;
+        }
+    }
+
     #survey {
         width: 100% !important;
         font-size: 80px !important;

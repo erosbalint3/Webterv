@@ -1,5 +1,8 @@
 body {
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 #contact {
@@ -19,6 +22,17 @@ body {
 }
 
 @media (pointer: coarse) {
+    @media(orientation: landscape) {
+        body {
+            height: 100%;
+        }
+
+        header > #mobileHeader > #links > li {
+            padding: 50px !important;
+            max-width: 93%;
+        }
+    }
+
     #contactInformations {
         width: 100%;
         margin-top: 200px !important;
@@ -29,10 +43,6 @@ body {
 
     #report {
         width: 40% !important;
-    }
-
-    #elements {
-        margin-top: -450px !important;
     }
 
     #emailDialog {
@@ -85,7 +95,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 #report {

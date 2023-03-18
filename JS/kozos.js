@@ -14,3 +14,22 @@ $(document).scroll(function () {
         $("#desktopHeader").css("backdrop-filter", "none");
     }
 });
+
+$("#home").click(function() {
+    window.location = "../HTML/index.html";
+});
+$("#dest").click(function() {
+    window.location = "../HTML/destinations.html";
+});
+$("#messages").click(function() {
+    window.location = "../HTML/messages.html";
+});
+$("#surveyLink").click(function() {
+    window.location = "../HTML/survey.html";
+});
+$("#contact").click(function() {
+    window.location = "../HTML/contact.html";
+});
+$("#profile").click(function() {
+    window.location = "../HTML/profile.html";
+});
