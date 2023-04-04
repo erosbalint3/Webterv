@@ -1,0 +1,9 @@
+{
+  "emailEmpty": "Az email cím nem lehet üres.",
+  "passwordEmpty" : "A jelszó nem lehet üres.",
+  "passwordTooShort" : "A jelszó túl rövid. Legalább 8 karakter hosszú kell legyen.",
+  "emailWrongFormat" : "Az email a nem megfelelő formátumban van megjelenítve. Kérem, az alábbi formátumban adja meg: x...x@y...y.z...z",
+  "passwordsDontMatch" : "A megadott jelszavak nem egyeznek meg, kérjük ellenőrizze őket.",
+  "passwordWrongFormat" : "A jelszó legalább egy betűt, egy számot és egy speciális karaktert kell tartalmazzon.",
+  "userNameEmpty" : "A felhasználónév nem lehet üres."
+}
