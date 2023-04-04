@@ -1,0 +1,160 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+    $errorJson = file_get_contents("../JSON/errors.json");
+    $jsonData = json_decode($errorJson, true);
+
+    $servername = 'localhost';
+    $username = 'root';
+    $password = 'root';
+    $conn = new mysqli($servername, $username, $password);
+    if ($conn -> connect_error) {
+        die("Connection failed: ".$conn -> connect_error);
+    }
+
+    $createDatabaseSql = "CREATE DATABASE IF NOT EXISTS felhasznalok";
+    if ($conn -> query($createDatabaseSql) === false) {
+        echo "Error creating database: ".$conn->error;
+    }
+    mysqli_select_db($conn, "felhasznalok");
+    $createFelhasznalokTable = "CREATE table IF NOT EXISTS Felhasznalok (
+        id int NOT NULL AUTO_INCREMENT,
+        username varchar(256),
+        email varchar(256),
+        password varchar(256),
+        PRIMARY KEY (id)
+        )
+    ";
+    if ($conn -> query($createFelhasznalokTable) === false) {
+        echo "Error creating table: ".$conn -> error;
+    }
+
+    $userNameUzenet = "";
+    $emailUzenet = "";
+    $passwordFormatUzenet = "";
+    $passwordsNotEqualsUzenet = "";
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $_SESSION['postdata'] = $_POST;
+        unset($_POST);
+        header("Location: ".$_SERVER['PHP_SELF']);
+        exit;
+
+    }
+
+if (array_key_exists('postdata', $_SESSION)) {
+    // Handle your submitted form here using the $_SESSION['postdata'] instead of $_POST
+    if (isset($_SESSION['postdata']['submitButton'])) {
+        if (
+            checkIfUserNameIsEmpty() &&
+            checkEmailAddressFormatIsValid() &&
+            checkPasswordCorrectFormatAndEqualsToRepeated()
+        ) {
+            $password = $_SESSION['postdata']['password'];
+            $email = $_SESSION['postdata']['emailAddress'];
+            $username = $_SESSION['postdata']['userName'];
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            $saveFelhasznalo = "INSERT INTO Felhasznalok (username, email, password)
+                                        VALUES ('$username', '$email', '$hashedPassword')";
+            $conn->query($saveFelhasznalo);
+        }
+    }
+    // After using the postdata, don't forget to unset/clear it
+    unset($_SESSION['postdata']);
+    session_abort();
+}
+    function emailRegex($input) {
+        $regex = '/[A-Za-z0-9]+@[A-Za-z]+\\.[A-Za-z]+/i';
+        return preg_match($regex, $input);
+    }
+    function passwordRegex($input) {
+        $regex = '/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@%&#:;,?~_]).{8,32}$/m';
+        return preg_match($regex, $input);
+    }
+    function checkIfUserNameIsEmpty() : bool {
+        global $userNameUzenet;
+        $userName = $_SESSION['postdata']['userName'];
+        if (strlen($userName) == 0) {
+            $userNameUzenet = "<p><strong>Hiba!</strong>".$GLOBALS['jsonData']['userNameEmpty']."</p>";
+            return false;
+        }
+        return true;
+    }
+    function checkEmailAddressFormatIsValid() : bool {
+        global $emailUzenet;
+        $email = $_SESSION['postdata']['emailAddress'];
+        if (strlen($email) == 0) {
+            $emailUzenet = "<p><strong>Hiba!</strong>".$GLOBALS['jsonData']['emailEmpty']."</p>";
+            return false;
+        } else if (!emailRegex($email)) {
+            $emailUzenet = "<p><strong>Hiba!</strong>".$GLOBALS['jsonData']['emailWrongFormat']."</p>";
+            return false;
+        } else {
+            $emailUzenet = "";
+            return true;
+        }
+    }
+    function checkPasswordCorrectFormatAndEqualsToRepeated() : bool {
+        global $passwordFormatUzenet;
+        global $passwordsNotEqualsUzenet;
+        $password = $_SESSION['postdata']['password'];
+        $passwordRepeated = $_SESSION['postdata']['passwordRepeated'];
+        if (strlen($password) < 8) {
+            $passwordFormatUzenet = "<p><strong>Hiba!</strong>".$GLOBALS['jsonData']['passwordTooShort']."</p>";
+            return false;
+        } else if (!passwordRegex($password)) {
+            echo $password;
+            $passwordFormatUzenet = "<p><strong>Hiba!</strong> ".$GLOBALS['jsonData']['passwordWrongFormat']."</p>";
+            return false;
+        } else if ($password != $passwordRepeated) {
+            $passwordsNotEqualsUzenet = "<p><strong>Hiba!</strong>".$GLOBALS['jsonData']['passwordsDontMatch']."</p>";
+            return false;
+        } else {
+            return true;
+        }
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/kozos.css">
+    <link rel="stylesheet" href="../CSS/register.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <span id="logo">
+            <img src="../Images/logo.png" alt="Logo">
+        </span>
+        <span id="navigationBar">
+            <a href="../HTML/login.php">Log in</a>
+        </span>
+    </header>
+    <main>
+        <form method="POST" action="register.php">
+            <label for="userName">Username</label>
+            <input type="text" id="userName" name="userName">
+            <?php echo $userNameUzenet; ?>
+            <label for="emailAddress">Email</label>
+            <input type="text" id="emailAddress" name="emailAddress">
+            <?php echo $emailUzenet; ?>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <?php echo $passwordFormatUzenet; ?>
+            <label for="passwordAgain">Password again</label>
+            <input type="password" id="passwordAgain" name="passwordRepeated">
+            <?php echo $passwordsNotEqualsUzenet; ?>
+            <input type="submit" name="submitButton">
+        </form>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../JS/kozos.js"></script>
+</body>
+
+</html>

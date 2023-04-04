@@ -17,25 +17,25 @@
                 <img src="../Images/logo.png" alt="Logo">
             </span>
             <span id="navigationBar">
-                <a href="../HTML/index.html">Home</a>
-                <a href="../HTML/destinations.html">Available destinations</a>
-                <a href="../HTML/messages.html">Messages</a>
-                <a href="../HTML/survey.html">Satisfaction survey</a>
-                <a href="../HTML/contact.html">Contact</a>
-                <a href="../HTML/login.html">Log in</a>
-                <a href="../HTML/profile.html">Profile</a>
+                <a href="../HTML/index.php">Home</a>
+                <a href="../HTML/destinations.php">Available destinations</a>
+                <a href="../HTML/messages.php">Messages</a>
+                <a href="../HTML/survey.php">Satisfaction survey</a>
+                <a href="../HTML/contact.php">Contact</a>
+                <a href="../HTML/login.php">Log in</a>
+                <a href="../HTML/profile.php">Profile</a>
             </span>
         </div>
         <div id="mobileHeader">
             <button id="menuButton"><img src="../Images/menu.png" alt="menu"></button>
             <ul id="links">
-                <li id="home"><a href="../HTML/index.html">Home</a></li>
-                <li id="dest"><a href="../HTML/destinations.html">Available destinations</a></li>
-                <li id="messages"><a href="../HTML/messages.html">Messages</a></li>
-                <li id="surveyLink"><a href="../HTML/survey.html">Satisfaction survey</a></li>
-                <li id="contact"><a href="../HTML/contact.html">Contact</a></li>
-                <li><a href="../HTML/login.html">Log in</a></li>
-                <li id="profile"><a href="../HTML/profile.html">Profile</a></li>
+                <li id="home"><a href="../HTML/index.php">Home</a></li>
+                <li id="dest"><a href="../HTML/destinations.php">Available destinations</a></li>
+                <li id="messages"><a href="../HTML/messages.php">Messages</a></li>
+                <li id="surveyLink"><a href="../HTML/survey.php">Satisfaction survey</a></li>
+                <li id="contact"><a href="../HTML/contact.php">Contact</a></li>
+                <li><a href="../HTML/login.php">Log in</a></li>
+                <li id="profile"><a href="../HTML/profile.php">Profile</a></li>
             </ul>
         </div>
     </header>
