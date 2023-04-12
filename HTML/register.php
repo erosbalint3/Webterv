@@ -62,9 +62,11 @@ if (!isset($_SESSION)) {
                 }
             }
         }
-        // After using the postdata, don't forget to unset/clear it
+        // Proba commit
         unset($_SESSION['postdata']);
         session_abort();
+        // pl itt van egy változtatás ezt majd töröld ki
+        echo "igen";
     }
 
     function checkIfUserAlreadyExists($email) : bool {
