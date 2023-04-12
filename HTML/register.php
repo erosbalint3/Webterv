@@ -18,7 +18,7 @@ if (!isset($_SESSION)) {
         echo "Error creating database: ".$conn->error;
     }
     mysqli_select_db($conn, "felhasznalok");
-    $createFelhasznalokTable = "CREATE table IF NOT EXISTS Felhasznalok (
+    $createFelhasznalokTable = "CREATE TABLE IF NOT EXISTS Felhasznalok (
         id int NOT NULL AUTO_INCREMENT,
         username varchar(256),
         email varchar(256),
@@ -26,9 +26,7 @@ if (!isset($_SESSION)) {
         PRIMARY KEY (id)
         )
     ";
-    if ($conn -> query($createFelhasznalokTable) === false) {
-        echo "Error creating table: ".$conn -> error;
-    }
+    mysqli_query($conn, $createFelhasznalokTable);
 
     $userNameUzenet = "";
     $emailUzenet = "";
@@ -43,27 +41,43 @@ if (!isset($_SESSION)) {
 
     }
 
-if (array_key_exists('postdata', $_SESSION)) {
-    // Handle your submitted form here using the $_SESSION['postdata'] instead of $_POST
-    if (isset($_SESSION['postdata']['submitButton'])) {
-        if (
-            checkIfUserNameIsEmpty() &&
-            checkEmailAddressFormatIsValid() &&
-            checkPasswordCorrectFormatAndEqualsToRepeated()
-        ) {
-            $password = $_SESSION['postdata']['password'];
-            $email = $_SESSION['postdata']['emailAddress'];
-            $username = $_SESSION['postdata']['userName'];
-            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-            $saveFelhasznalo = "INSERT INTO Felhasznalok (username, email, password)
-                                        VALUES ('$username', '$email', '$hashedPassword')";
-            $conn->query($saveFelhasznalo);
+    if (array_key_exists('postdata', $_SESSION)) {
+        if (isset($_SESSION['postdata']['submitButton'])) {
+            if (
+                checkIfUserNameIsEmpty() &&
+                checkEmailAddressFormatIsValid() &&
+                checkPasswordCorrectFormatAndEqualsToRepeated()
+            ) {
+                $password = $_SESSION['postdata']['password'];
+                $email = $_SESSION['postdata']['emailAddress'];
+                $username = $_SESSION['postdata']['userName'];
+                $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+                $saveFelhasznalo = "INSERT INTO Felhasznalok (username, email, password)
+                                            VALUES ('$username', '$email', '$hashedPassword')";
+                if (!checkIfUserAlreadyExists($email)) {
+                    $conn->query($saveFelhasznalo);
+                } else {
+                    echo '<script>alert("Error in creating user, it already exists!")</script>';
+                }
+            }
+        }
+        // After using the postdata, don't forget to unset/clear it
+        unset($_SESSION['postdata']);
+        session_abort();
+    }
+
+    function checkIfUserAlreadyExists($email) : bool {
+        $getFelhasznaloByEmailAddress = "SELECT * FROM Felhasznalok WHERE felhasznalok.Felhasznalok.email = '$email'";
+        $result = $GLOBALS['conn'] -> query($getFelhasznaloByEmailAddress);
+        if (mysqli_num_rows($result) == 0) {
+            return false;
+        }
+        else {
+            return true;
         }
     }
-    // After using the postdata, don't forget to unset/clear it
-    unset($_SESSION['postdata']);
-    session_abort();
-}
+
     function emailRegex($input) {
         $regex = '/[A-Za-z0-9]+@[A-Za-z]+\\.[A-Za-z]+/i';
         return preg_match($regex, $input);
