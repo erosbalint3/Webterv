@@ -130,6 +130,7 @@
                     <h1 id="detailsHeader">&nbsp;</h1>
                     <p id="details">&nbsp;</p>
                     <h3 id="price">&nbsp;</h3>
+                    <a href="shopping.php"><button>Buy ticket</button></a>
                 </div>
             </div>
         </div>

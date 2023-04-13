@@ -1,3 +1,12 @@
+<?php
+    require_once 'user.php';
+    session_start();
+    if (!isset($_SESSION['user'])) {
+        header('Location: login.php');
+        exit;
+    }
+    $user = $_SESSION['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,21 +50,23 @@
         </div>
     </header>
     <div class="container">
-        <img class="profile-picture" src="../Images/erosBalintProfilkep.jpg" alt="Profile Picture">
-        <h1>Erős Bálint</h1>
+        <img class="profile-picture" src="<?php echo $user->getProfilepic() ?>" alt="Profile Picture">
+        <h1><?php echo $user->getUsername()?></h1>
         <div class="description">
-            Erős Bálint vagyok. A Szegedi Tudományegyetem programtervező informatikus szakán tanulok. Emellett a Sonrisa
-            informatikai kft. cégnél dolgozok részmunkaidőben webfejlesztőként.
+            <?php echo $user->getDescription()?>
         </div>
         <div class="contact-info">
             <div>
                 <img src="https://img.icons8.com/material-rounded/24/000000/email.png" alt="emailicon">
-                ilyenKonnyenNemKapodEl@gmail.com
+                <?php echo $user->getEmail()?>
             </div>
-            <div>
-                <img src="https://img.icons8.com/material-outlined/24/000000/phone--v1.png" alt="phoneIcon">
-                123-456-7890
-            </div>
+            
+        </div>
+        <div>
+            <a href="change_profile.php"><button>Change Profile</button></a>
+            <form method="POST" action="logout.php">
+                <input type="submit" value="Logout">
+            </form>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
