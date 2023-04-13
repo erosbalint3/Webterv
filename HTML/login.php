@@ -11,62 +11,11 @@ $host = "localhost";
 $conn = mysqli_connect($host, $username, $password);
 mysqli_select_db($conn, "felhasznalok");
 
-class User {
-    private $username;
-    private $email;
-    private $hashedPassword;
-
-    /**
-     * @param $username       User felhasználóneve.
-     * @param $email          User email címe.
-     * @param $hashedPassword User titkosított jelszava.
-     */
-    public function __construct($username, $email, $hashedPassword)
-    {
-        $this->username = $username;
-        $this->email = $email;
-        $this->hashedPassword = $hashedPassword;
-    }
-
-    /**
-     * @return mixed A felhasználó felhasználónevét.
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * @param mixed $username A felhasználó felhasználóneve.
-     */
-    public function setUsername($username): void
-    {
-        $this->username = $username;
-    }
-
-    /**
-     * @return mixed A felhasználó email címét.
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $email A felhasználó email címe.
-     */
-    public function setEmail($email): void
-    {
-        $this->email = $email;
-    }
-
-    /**
-     * @return mixed A felhasználó titkosított jelszavát.
-     */
-    public function getHashedPassword()
-    {
-        return $this->hashedPassword;
-    }
+require_once 'user.php'; 
+session_start();
+if (isset($_SESSION['user'])) {
+    header('Location: profile.php');
+    exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -81,7 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email == $user->getEmail() &&
             password_verify($password, $user->getHashedPassword())
         ) {
-            header('Location: '.'../HTML/index.php');
+            session_start();
+            $_SESSION['user'] = $user;
+            header('Location: '.'../HTML/profile.php');
         }
     }
 }
@@ -116,7 +67,7 @@ function getUserByEmail($email) {
     $user = mysqli_query($GLOBALS['conn'], $getUserQuery);
     if (mysqli_num_rows($user) > 0) {
         while($rowData = mysqli_fetch_array($user)){
-            $newUser = new User($rowData['username'], $rowData['email'], $rowData['password']);
+            $newUser = new User($rowData['username'], $rowData['email'], $rowData['password'], $rowData['profilepic'], $rowData['description']);
             return $newUser;
         }
     }

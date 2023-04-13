@@ -23,7 +23,9 @@ if (!isset($_SESSION)) {
         username varchar(256),
         email varchar(256),
         password varchar(256),
-        PRIMARY KEY (id)
+        PRIMARY KEY (id),
+        profilepic varchar(512),
+        description varchar(1024)
         )
     ";
     mysqli_query($conn, $createFelhasznalokTable);
@@ -52,9 +54,11 @@ if (!isset($_SESSION)) {
                 $email = $_SESSION['postdata']['emailAddress'];
                 $username = $_SESSION['postdata']['userName'];
                 $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+                $profilepic = isset($_SESSION['postdata']['profilepic']) ? $_SESSION['postdata']['profilepic'] : '../Images/avatar.jpg';
+                $description = isset($_SESSION['postdata']['description']) ? $_SESSION['postdata']['description'] : '';
 
-                $saveFelhasznalo = "INSERT INTO Felhasznalok (username, email, password)
-                                            VALUES ('$username', '$email', '$hashedPassword')";
+                $saveFelhasznalo = "INSERT INTO Felhasznalok (username, email, password, profilepic, description)
+                                            VALUES ('$username', '$email', '$hashedPassword', '$profilepic', '$description')";
                 if (!checkIfUserAlreadyExists($email)) {
                     $conn->query($saveFelhasznalo);
                 } else {

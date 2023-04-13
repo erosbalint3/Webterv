@@ -1,25 +1,12 @@
-<?php
-    require_once 'user.php';
-    session_start();
-    if (!isset($_SESSION['user'])) {
-        header('Location: login.php');
-        exit;
-    }
-    $user = $_SESSION['user'];
-?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>My profile</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
     <link rel="stylesheet" href="../CSS/profile.css">
     <link rel="stylesheet" href="../CSS/kozos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
         <div id="desktopHeader">
@@ -50,27 +37,18 @@
         </div>
     </header>
     <div class="container">
-        <img class="profile-picture" src="<?php echo $user->getProfilepic() ?>" alt="Profile Picture">
-        <h1><?php echo $user->getUsername()?></h1>
-        <div class="description">
-            <?php echo $user->getDescription()?>
-        </div>
-        <div class="contact-info">
-            <div>
-                <img src="https://img.icons8.com/material-rounded/24/000000/email.png" alt="emailicon">
-                <?php echo $user->getEmail()?>
-            </div>
-            
-        </div>
-        <div>
-            <a href="change_profile.php"><button>Change Profile</button></a>
-            <form method="POST" action="logout.php">
-                <input type="submit" value="Logout">
-            </form>
-        </div>
+        <h1>Edit Profile</h1>
+        <form action="profile.php" method="POST" enctype="multipart/form-data">
+            <label for="profilepic">Profile Picture:</label>
+            <input type="file" name="profilepic" id="profilepic">
+            <br>
+            <label for="description">Description:</label>
+            <input type="text" name="description" id="description" placeholder="Describe yourself">
+            <br>
+            <input type="submit" value="Save Changes" >
+        </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="../JS/kozos.js"></script>
 </body>
-
 </html>
