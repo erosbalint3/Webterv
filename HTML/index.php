@@ -23,12 +23,7 @@
             <span id="navigationBar">
                 <?php
                     if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true){
-                        echo "<a>Home</a>";
-                        echo "<a>Available destinations</a>";
-                        echo "<a>Messages</a>";
-                        echo "<a>Satisfaction survey</a>";
-                        echo "<a>Contact</a>";
-                        echo "<a>Log in</a>";
+                        echo "<a href='login.php'>Log in</a>";
                     } else {
                         echo '<a href="../HTML/index.php">Home</a>';
                         echo '<a href="../HTML/destinations.php">Available destinations</a>';
