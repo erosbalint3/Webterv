@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +21,24 @@
                 <img src="../Images/logo.png" alt="Logo">
             </span>
             <span id="navigationBar">
-                <a href="../HTML/index.php">Home</a>
-                <a href="../HTML/destinations.php">Available destinations</a>
-                <a href="../HTML/messages.php">Messages</a>
-                <a href="../HTML/survey.php">Satisfaction survey</a>
-                <a href="../HTML/contact.php">Contact</a>
-                <a href="../HTML/login.php">Log in</a>
-                <a href="../HTML/profile.php">Profile</a>
+                <?php
+                    if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true){
+                        echo "<a>Home</a>";
+                        echo "<a>Available destinations</a>";
+                        echo "<a>Messages</a>";
+                        echo "<a>Satisfaction survey</a>";
+                        echo "<a>Contact</a>";
+                        echo "<a>Log in</a>";
+                    } else {
+                        echo '<a href="../HTML/index.php">Home</a>';
+                        echo '<a href="../HTML/destinations.php">Available destinations</a>';
+                        echo '<a href="../HTML/messages.php">Messages</a>';
+                        echo '<a href="../HTML/survey.php">Satisfaction survey</a>';
+                        echo '<a href="../HTML/contact.php">Contact</a>';
+                        echo "<a href='../HTML/login.php'>Log out</a>";
+                        echo '<a href="../HTML/profile.php">Profile</a>';
+                    }
+                ?>
             </span>
         </div>
         <div id="mobileHeader">

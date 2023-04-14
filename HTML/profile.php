@@ -6,6 +6,7 @@
         exit;
     }
     $user = $_SESSION['user'];
+    echo $user->getProfilepic();
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -54,8 +54,8 @@ if (!isset($_SESSION)) {
                 $email = $_SESSION['postdata']['emailAddress'];
                 $username = $_SESSION['postdata']['userName'];
                 $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-                $profilepic = isset($_SESSION['postdata']['profilepic']) ? $_SESSION['postdata']['profilepic'] : '../Images/avatar.jpg';
-                $description = isset($_SESSION['postdata']['description']) ? $_SESSION['postdata']['description'] : '';
+                $profilepic = isset($_SESSION['profilepic']) ? $_SESSION['profilepic'] : '../Images/erosBalintProfilkep.jpg';
+                $description = isset($_SESSION['description']) ? $_SESSION['description'] : '';
 
                 $saveFelhasznalo = "INSERT INTO Felhasznalok (username, email, password, profilepic, description)
                                             VALUES ('$username', '$email', '$hashedPassword', '$profilepic', '$description')";

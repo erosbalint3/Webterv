@@ -1,5 +1,4 @@
 $("#menuButton").click(function () {
-    console.log("anyad");
     if ($("#links").css("display") == "none") {
         $("#links").css("display", "flex");
     } else {
