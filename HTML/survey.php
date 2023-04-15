@@ -1,3 +1,45 @@
+<?php
+    require_once 'user.php';
+    session_start();
+    if (!isset($_SESSION['user'])) {
+        header('Location: login.php');
+        exit;
+    }
+    $user = $_SESSION['user'];
+    $servername = 'localhost';
+    $username = 'root';
+    $password = 'root';
+    $database = 'rating';
+    $conn = new mysqli($servername, $username, $password, $database);
+    if ($conn -> connect_error) {
+        die("Connection failed: ".$conn -> connect_error);
+    }
+    $createRatingTable = "CREATE TABLE IF NOT EXISTS Rating (
+        id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        username varchar(256),
+        overall int,
+        ticketing int,
+        os int,
+        cs int
+        )
+    ";
+    mysqli_query($conn, $createRatingTable);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $user->getUsername();
+        $overall = $_POST['overall'];
+        $ticketing = $_POST['ticketing'];
+        $os = $_POST['os'];
+        $cs = $_POST['cs'];
+        $saveFelhasznalo = "INSERT INTO Rating (username, overall, ticketing, os, cs)
+                            VALUES ('$username', '$overall', '$ticketing', '$os', '$cs')";
+        if (mysqli_query($conn, $saveFelhasznalo)) {
+            header('Location: rating.php');
+            exit;
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -44,7 +86,7 @@
             <h1>Please rate us!</h1>
         </div>
         <div id="survey">
-            <form method="POST">
+            <form method="POST" action="survey.php">
                 <table>
                     <tr>
                         <th></th>
