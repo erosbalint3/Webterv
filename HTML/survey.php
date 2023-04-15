@@ -10,10 +10,15 @@
     $username = 'root';
     $password = 'root';
     $database = 'rating';
-    $conn = new mysqli($servername, $username, $password, $database);
+    $conn = new mysqli($servername, $username, $password);
     if ($conn -> connect_error) {
         die("Connection failed: ".$conn -> connect_error);
     }
+    $createDatabaseSql = "CREATE DATABASE IF NOT EXISTS rating";
+    if ($conn -> query($createDatabaseSql) === false) {
+        echo "Error creating database: ".$conn->error;
+    }
+    mysqli_select_db($conn, "rating");
     $createRatingTable = "CREATE TABLE IF NOT EXISTS Rating (
         id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
         username varchar(256),
