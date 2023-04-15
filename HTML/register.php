@@ -26,8 +26,7 @@ if (!isset($_SESSION)) {
         PRIMARY KEY (id),
         profilepic varchar(512),
         description varchar(1024)
-        )
-    ";
+    )";
     mysqli_query($conn, $createFelhasznalokTable);
 
     $userNameUzenet = "";
@@ -40,7 +39,6 @@ if (!isset($_SESSION)) {
         unset($_POST);
         header("Location: ".$_SERVER['PHP_SELF']);
         exit;
-
     }
 
     if (array_key_exists('postdata', $_SESSION)) {
@@ -54,7 +52,7 @@ if (!isset($_SESSION)) {
                 $email = $_SESSION['postdata']['emailAddress'];
                 $username = $_SESSION['postdata']['userName'];
                 $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-                $profilepic = isset($_SESSION['profilepic']) ? $_SESSION['profilepic'] : '../Images/erosBalintProfilkep.jpg';
+                $profilepic = isset($_SESSION['profilepic']) ? $_SESSION['profilepic'] : '../Images/avatar.jpg';
                 $description = isset($_SESSION['description']) ? $_SESSION['description'] : '';
 
                 $saveFelhasznalo = "INSERT INTO Felhasznalok (username, email, password, profilepic, description)
@@ -66,9 +64,9 @@ if (!isset($_SESSION)) {
                 }
             }
         }
-        // After using the postdata, don't forget to unset/clear it
         unset($_SESSION['postdata']);
         session_abort();
+        header("Location: login.php");
     }
 
     function checkIfUserAlreadyExists($email) : bool {

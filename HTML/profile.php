@@ -67,6 +67,9 @@
             <form method="POST" action="logout.php">
                 <input type="submit" value="Logout">
             </form>
+            <form action="deleteUser.php" method="post">
+                <input type="submit" name="delete" value="Delete user profile">
+            </form>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
