@@ -1,9 +1,10 @@
 # Travel Agency 
 ##  Hiányzó elemek/ ideiglenes megoldások:
- - Login oldalon a submit gomb egyenlőre csak átnavigál a kezdőoldalra, a tényleges bejelentkezés a 2. mérföldkőben lesz megvalósítva
- - Ugyanez igaz a regisztrációra, jelenleg még semmilyen validáció nincs, a tényleges adatmentés, stb. a php részében lesz implementálva
- - Profile menüpont egyenlőre mindig látszódik külön menüpont alatt, a második mérföldkőben, ha bejelentkezett a felhasználó, akkor a log in helyett lesz
-
+- Üzenetküldés sajnos nem funkciónál
  ## Tesztelés
-  - Telefonon én live serverrel teszteltem ngrok-kal, de ha a teszteléskor használt hálózat támogatja a Lanozást, akkor IP cím alapján el lehet érni a weboldalat a telefonról is.
-  
+- Adatbázissal lett megoldva:  MySQL
+  - Username: root
+  - Password: root
+  - Host name: localhost
+  - Leírás: MacOS-en dolgoztam a xampp nem működött esetemben, másik programmal dolgoztam, de ha jól tudom a php automatikusan megoldja a port számot, azzal nem kell foglalkozni.
+  - Ha véletlenül az adatbázissal gond lenne, nem akar elindulni valami config fájl vagy valami miatt, akkor az alábbi emailen el tudtok érni: erosbalint3@gmail.com (de nem kellene probléma legyen)
