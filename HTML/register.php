@@ -26,8 +26,7 @@
         PRIMARY KEY (id),
         profilepic varchar(512),
         description varchar(1024)
-        )
-    ";
+    )";
     mysqli_query($conn, $createFelhasznalokTable);
 
     $userNameUzenet = "";
@@ -40,7 +39,6 @@
         unset($_POST);
         header("Location: ".$_SERVER['PHP_SELF']);
         exit;
-
     }
 
     if (array_key_exists('postdata', $_SESSION)) {
@@ -66,9 +64,9 @@
                 }
             }
         }
-        // After using the postdata, don't forget to unset/clear it
         unset($_SESSION['postdata']);
         session_abort();
+        header("Location: login.php");
     }
 
     function checkIfUserAlreadyExists($email) : bool {

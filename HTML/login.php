@@ -23,8 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $password = $_POST['password'];
         $email = $_POST['emailAddress'];
         $user = getUserByEmail($email);
-
+        if ($user === null) {
+            echo '<script>alert("Wrong email or password given! Please try again!")</script>';
+        }
         if (
+            $user !== null &&
             checkEmailAddressFormatIsValid() &&
             checkPasswordNotEmpty() &&
             $email == $user->getEmail() &&
