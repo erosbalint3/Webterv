@@ -24,6 +24,7 @@
                 <a href="../HTML/contact.php">Contact</a>
                 <a href="../HTML/login.php">Log in</a>
                 <a href="../HTML/profile.php">Profile</a>
+                <a href="../HTML/publicProfiles.php">Public Profiles</a>
             </span>
         </div>
         <div id="mobileHeader">
@@ -36,6 +37,7 @@
                 <li id="contact"><a href="../HTML/contact.php">Contact</a></li>
                 <li><a href="../HTML/login.php">Log in</a></li>
                 <li id="profile"><a href="../HTML/profile.php">Profile</a></li>
+                <li id="publicProfiles"><a href="../HTML/publicProfiles.php">Public Profiles</a></li>
             </ul>
         </div>
     </header>
@@ -130,7 +132,6 @@
                     <h1 id="detailsHeader">&nbsp;</h1>
                     <p id="details">&nbsp;</p>
                     <h3 id="price">&nbsp;</h3>
-                    <a href="shopping.php"><button>Buy ticket</button></a>
                 </div>
             </div>
         </div>

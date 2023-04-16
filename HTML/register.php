@@ -1,7 +1,7 @@
 <?php
-if (!isset($_SESSION)) {
-    session_start();
-}
+    if (!isset($_SESSION)) {
+        session_start();
+    }
     $errorJson = file_get_contents("../JSON/errors.json");
     $jsonData = json_decode($errorJson, true);
 
@@ -54,7 +54,7 @@ if (!isset($_SESSION)) {
                 $email = $_SESSION['postdata']['emailAddress'];
                 $username = $_SESSION['postdata']['userName'];
                 $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-                $profilepic = isset($_SESSION['profilepic']) ? $_SESSION['profilepic'] : '../Images/erosBalintProfilkep.jpg';
+                $profilepic = isset($_SESSION['profilepic']) ? $_SESSION['profilepic'] : '../Images/avatar.jpg';
                 $description = isset($_SESSION['description']) ? $_SESSION['description'] : '';
 
                 $saveFelhasznalo = "INSERT INTO Felhasznalok (username, email, password, profilepic, description)
@@ -155,24 +155,29 @@ if (!isset($_SESSION)) {
         </span>
     </header>
     <main>
-        <form method="POST" action="register.php">
+        <form method="POST" action="register.php" id="registerForm">
             <label for="userName">Username</label>
             <input type="text" id="userName" name="userName">
+            <small id="userNameError"></small>
             <?php echo $userNameUzenet; ?>
             <label for="emailAddress">Email</label>
             <input type="text" id="emailAddress" name="emailAddress">
+            <small id="emailAddressError"></small>
             <?php echo $emailUzenet; ?>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" min="8">
+            <small id="passwordError"></small>
             <?php echo $passwordFormatUzenet; ?>
             <label for="passwordAgain">Password again</label>
-            <input type="password" id="passwordAgain" name="passwordRepeated">
+            <input type="password" id="passwordAgain" name="passwordRepeated" minlength="8">
+            <small id="passwordAgainError"></small>
             <?php echo $passwordsNotEqualsUzenet; ?>
             <input type="submit" name="submitButton">
         </form>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="../JS/kozos.js"></script>
+    <script src="../JS/register.js"></script>
 </body>
 
 </html>

@@ -26,8 +26,7 @@
         ticketing int,
         os int,
         cs int
-        )
-    ";
+    )";
     mysqli_query($conn, $createRatingTable);
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = $user->getUsername();
@@ -35,13 +34,27 @@
         $ticketing = $_POST['ticketing'];
         $os = $_POST['os'];
         $cs = $_POST['cs'];
-        $saveFelhasznalo = "INSERT INTO Rating (username, overall, ticketing, os, cs)
+        $saveRating = "INSERT INTO Rating (username, overall, ticketing, os, cs)
                             VALUES ('$username', '$overall', '$ticketing', '$os', '$cs')";
-        if (mysqli_query($conn, $saveFelhasznalo)) {
-            header('Location: rating.php');
-            exit;
-        } else {
-            echo "Error: " . mysqli_error($conn);
+        $editRating = "UPDATE Rating SET overall = '$overall', ticketing = '$ticketing', os ='$os', cs = '$cs'
+                        WHERE username = '$username'";
+        $findFelhasznaloByUsername = mysqli_query($conn, "SELECT * FROM Rating WHERE username = '$username'");
+
+        if (mysqli_num_rows($findFelhasznaloByUsername) == 0) {
+            if (mysqli_query($conn, $saveRating)) {
+                header('Location: rating.php');
+                exit;
+            } else {
+                echo "Error: " . mysqli_error($conn);
+            }
+        }
+        else {
+            if (mysqli_query($conn, $editRating)) {
+                header('Location: rating.php');
+                exit;
+            } else {
+                echo "Error: " . mysqli_error($conn);
+            }
         }
     }
 ?>
@@ -69,8 +82,8 @@
                 <a href="../HTML/messages.php">Messages</a>
                 <a href="../HTML/survey.php">Satisfaction survey</a>
                 <a href="../HTML/contact.php">Contact</a>
-                <a href="../HTML/login.php">Log in</a>
                 <a href="../HTML/profile.php">Profile</a>
+                <a href="../HTML/publicProfiles.php">Public Profiles</a>
             </span>
         </div>
         <div id="mobileHeader">
@@ -81,8 +94,8 @@
                 <li id="messages"><a href="../HTML/messages.php">Messages</a></li>
                 <li id="surveyLink"><a href="../HTML/survey.php">Satisfaction survey</a></li>
                 <li id="contact"><a href="../HTML/contact.php">Contact</a></li>
-                <li><a href="../HTML/login.php">Log in</a></li>
                 <li id="profile"><a href="../HTML/profile.php">Profile</a></li>
+                <li id="publicProfile"><a href="../HTML/publicProfiles.php">Public Profiles</a></li>
             </ul>
         </div>
     </header>
@@ -136,7 +149,7 @@
                 </table>
                 <input type="submit" value="Submit">
             </form>
-            <form method="POST" id="mobile">
+            <form method="POST" id="mobile" action="survey.php">
                 <fieldset>
                     <legend>Overall Satisfaction</legend>
                     <span>
@@ -233,6 +246,7 @@
                     </span>
                 </fieldset>
             </form>
+            <a href="rating.php">Ratings</a>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

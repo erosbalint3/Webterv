@@ -1,0 +1,35 @@
+.profileCard {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(119, 119, 119, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: 10px;
+}
+
+#profileCards {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 10vh;
+    width: 80%;
+    color: white;
+    flex-wrap: wrap;
+}
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.profileCard > p, b {
+    font-size: 25px;
+}
+.profileCard > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}

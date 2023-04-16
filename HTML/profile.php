@@ -32,8 +32,8 @@
                 <a href="../HTML/messages.php">Messages</a>
                 <a href="../HTML/survey.php">Satisfaction survey</a>
                 <a href="../HTML/contact.php">Contact</a>
-                <a href="../HTML/login.php">Log in</a>
                 <a href="../HTML/profile.php">Profile</a>
+                <a href="../HTML/publicProfiles.php">Public Profiles</a>
             </span>
         </div>
         <div id="mobileHeader">
@@ -44,8 +44,8 @@
                 <li id="messages"><a href="../HTML/messages.php">Messages</a></li>
                 <li id="surveyLink"><a href="../HTML/survey.php">Satisfaction survey</a></li>
                 <li id="contact"><a href="../HTML/contact.php">Contact</a></li>
-                <li><a href="../HTML/login.php">Log in</a></li>
                 <li id="profile"><a href="../HTML/profile.php">Profile</a></li>
+                <li id="publicProfiles"><a href="../HTML/publicProfiles.php">Public Profiles</a></li>
             </ul>
         </div>
     </header>
@@ -63,9 +63,9 @@
             
         </div>
         <div>
-            <a href="change_profile.php"><button>Change Profile</button></a>
+            <a href="change_profile.php" id="changeProfile">Change Profile</a>
             <form method="POST" action="logout.php">
-                <input type="submit" value="Logout">
+                <input type="submit" value="Logout" id="logoutButton">
             </form>
         </div>
     </div>

@@ -109,3 +109,19 @@ h1 {
         background-color: rgb(122, 122, 123);
     }
 }
+
+#changeProfile {
+    padding: 5px;
+    background-color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+#logoutButton {
+    border: none;
+    background-color: #cccccc;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 5px;
+}

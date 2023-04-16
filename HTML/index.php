@@ -23,7 +23,8 @@
             <span id="navigationBar">
                 <?php
                     if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true){
-                        echo "<a href='login.php'>Log in</a>";
+                        echo "<a href='../HTML/login.php'>Log in</a>";
+                        echo "<a href='../HTML/contact.php'>Contact</a>";
                     } else {
                         echo '<a href="../HTML/index.php">Home</a>';
                         echo '<a href="../HTML/destinations.php">Available destinations</a>';
@@ -32,6 +33,7 @@
                         echo '<a href="../HTML/contact.php">Contact</a>';
                         echo "<a href='../HTML/login.php'>Log out</a>";
                         echo '<a href="../HTML/profile.php">Profile</a>';
+                        echo '<a href="../HTML/publicProfiles.php">Public Profiles</a>';
                     }
                 ?>
             </span>
@@ -46,6 +48,7 @@
                 <li id="contact"><a  href="../HTML/contact.php">Contact</a></li>
                 <li><a  href="../HTML/login.php">Log in</a></li>
                 <li id="profile"><a  href="../HTML/profile.php">Profile</a></li>
+                <li id="publicProfiles"><a href="../HTML/publicProfiles.php">Public Profiles</a></li>
             </ul>
         </div>
     </header>
